@@ -101,3 +101,26 @@
     text-align: justify;
   }
 }
+
+/* When the screen size is smaller than 526px */
+@media (max-width: 526px) {
+  .btn.top-btn {
+    padding: 10px 20px; /* Adjust padding if needed */
+    position: fixed; /* Make sure it's fixed at the bottom */
+    bottom: 20px; /* Space from the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Offset by 50% to center */
+  }
+}
+
+
+/* Adjust animation duration on smaller screens */
+@media (max-width: 768px) {
+  #profile .section__pic-container {
+    animation: slideIn 1.5s ease-out;
+  }
+
+  #about .about-details-container {
+    animation: slideUp 1.5s ease-out;
+  }
+}
