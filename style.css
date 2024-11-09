@@ -266,13 +266,14 @@ section {
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0); /* Hover background */
+  background: rgb(53, 53, 53); /* Hover background */
   color: white; /* Hover text color */
 }
 
 .btn-color-2 {
-  background: none; /* Transparent background by default */
-  color: black; /* Default text color */
+  background: rgb(53, 53, 53); /* Transparent background by default */
+  border-color: black;
+  color: white; /* Default text color */
 }
 
 .btn-color-2:hover {
@@ -381,11 +382,37 @@ section {
 
 /* FOOTER SECTION */
 
-footer {
-  height: 26vh;
-  margin: 0 1rem;
+.top-btn {
+  background-color: #7587ff;  /* Button color */
+  color: white;  /* Text color */
+  padding: 10px 20px;  /* Padding for the button */
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
 }
 
-footer p {
-  text-align: center;
+.top-btn:hover {
+  background-color: #444f94;  /* Darker shade on hover */
+  transform: translateY(-2px);  /* Button moves slightly up on hover */
 }
+
+.btn-container {
+  text-align: center;  /* Center the button */
+  margin-top: 20px;  /* Add some space above */
+}
+
+/* Ensure button is positioned at the bottom of the page */
+footer {
+  padding: 20px;
+  background-color: #222;  /* Dark background for footer */
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+footer .nav-links-container {
+  margin-bottom: 10px;
+}
+
