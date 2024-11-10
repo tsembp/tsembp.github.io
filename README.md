@@ -1,4 +1,4 @@
-# 🌐 Personal Landing-Page [UNDER DEVELOPMENT]
+# 🌐 Personal Landing-Page
 
 ## 📝 Overview:
 This project started as a self-paced learning exercise based on a beginner-friendly YouTube tutorial. It introduced me to the fundamentals of creating a simple, responsive landing page using HTML, CSS, and JavaScript. I will continue expanding my knowledge in HTML, CSS and Javascript and with that I will improve the website by adding new sections, new functionalities and more.
