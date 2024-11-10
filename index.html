@@ -52,7 +52,7 @@
         <div class = "btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
+            onclick="window.open('./assets/Panagiotis Tsembekis - Resume 2024.pdf')"
           >
             Download CV
           </button>
@@ -62,36 +62,39 @@
         </div>
         <div id = "socials-container">
           <img src="./assets/linkedin.png" alt="LinkedIn Profile" 
-            class = "icon" onclick="location.href = 'https://www.linkedin.com/in/panagiotis-tsembekis/'">
+            class = "icon" onclick="window.open('https://www.linkedin.com/in/panagiotis-tsembekis/', '_blank')">
             <img src="./assets/github.png" alt="GitHub Profile" 
-            class = "icon" onclick="location.href = 'https://github.com/tsembp/'">
+            class = "icon" onclick="window.open('https://github.com/tsembp/', '_blank')">
         </div>
       </div>
     </section>
     <section id="education">
       <div class="education-container">
-        <h2>Education</h2>
+        <div class="section-header">
+          <img src="./assets/education-icon.png" alt="Education Icon, Icon made by Pixel perfect from www.flaticon.com" class="decorative-icon">
+          <h2>Education</h2>
+        </div>
         <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Apostolos Varnavas Lyceum</h3>
-              <h4>High School Diploma | 2019-2022</h4>
-              <p>Physics, Math, Modern Greek, Informatics, Networks</p>
-              <p>Graduated with 19.22/20 GPA</p>
-              <p>Achieved 11th highest score in the Pancyprian Examinations for Computer Science</p>
-            </div>
-          </div>
           <div class="timeline-item">
             <div class="timeline-content">
               <h3>University of Cyprus</h3>
               <h4>B.Sc. Degree 2023-Present</h4>
-              <p>Computer Science, 2nd Year</p>
-              <p>Relevant courses include Discrete Mathematics, Data Structures, and Algorithms.</p>
+              <p>> Computer Science, 2nd Year</p>
+              <p>> Relevant courses include Data Structures and Algorithms, Object-Oriented Programming, C Programming, Computer Organization and Assembly Programming, Discrete Mathematics, Calculus I & II, Linear Algebra, and Probability and Statistics.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Apostolos Varnavas Lyceum</h3>
+              <h4>High School Diploma | 2019-2022</h4>
+              <p>> Informatics, Networks, Physics, Math, Modern Greek</p>
+              <p>> Graduated with 19.22/20 GPA</p>
+              <p>> Achieved 11th highest score, 19.41/20, in the Pancyprian Examinations for Computer Science</p>
             </div>
           </div>
         </div>
       </div>
-    </section>    
+    </section>
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -104,31 +107,42 @@
           />
         </div>
         <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>Aug 2020 - Sept 2020 <br />IT Specialist @ I'm Working On I.T.</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Sept 2023 - Present<br />B.Sc. Computer Science @ University of Cyprus</p>
-            </div>
-          </div>
           <div class="text-container">
             <p>
-              I’m a highly motivated Computer Science student with a strong passion for technology and innovation. In addition to my studies, I engage in freelance web development alongside a close team mate, focusing on web design, development, and SEO. My goal is to continuously learn, grow, and excel in the digital space, leveraging my experience to solve complex problems and contribute to impactful projects.
-              I’m driven to turn my ambitions into reality and make a meaningful impact in the tech industry.
+              I am a dedicated Computer Science student at the University of Cyprus, driven by a deep passion 
+              for technology and innovation. Over the past two years, I've built a strong foundation in programming 
+              languages like Java and C, as well as in essential techniques such as Object-Oriented Programming and Data 
+              Structures and Algorithms. I am committed to continuous learning and strive to apply my skills in creative, 
+              impactful ways. My goal is to excel in the digital landscape, tackle challenging problems, and contribute 
+              meaningfully to the tech industry.
             </p>
+            <div class="skills-container">
+              <p class="skills-title">> Skills:</p>
+              <div class="skill">
+                <img src="./assets/java-icon.png" alt="Java Icon" class="skill-icon">
+                <!-- <p class="skill-name">Java</p> -->
+              </div>
+              <div class="skill">
+                <img src="./assets/c-icon.webp" alt="C Icon" class="skill-icon">
+                <!-- <p class="skill-name">C</p> -->
+              </div>
+              <div class="skill">
+                <img src="./assets/assembly-icon.svg" alt="Assembly Icon" class="skill-icon">
+                <!-- <p class="skill-name">MIPS Assembly</p> -->
+              </div>
+              <div class="skill">
+                <img src="./assets/html-icon.png" alt="HTML Icon" class="skill-icon">
+                <!-- <p class="skill-name">HTML</p> -->
+              </div>
+              <div class="skill">
+                <img src="./assets/css-icon.png" alt="CSS Icon" class="skill-icon">
+                <!-- <p class="skill-name">CSS</p> -->
+              </div>
+              <div class="skill">
+                <img src="./assets/github.png" alt="GitHub Icon" class="skill-icon">
+                <!-- <p class="skill-name">GitHub</p> -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -158,6 +172,7 @@
         <div class = "nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
             <!-- <li><a href="#experience">Experience</a></li> -->
             <li><a href="#contact">Contact</a></li>
           </ul>

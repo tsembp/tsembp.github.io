@@ -158,6 +158,7 @@ section {
   padding-top: 4vh;
   height: 96vh;
   margin: 0 10rem;
+  margin-bottom: 40px;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -219,11 +220,17 @@ section {
   margin-left: 0px;
 }
 
+
 /* ICONS STYLING */
 
 .icon {
   cursor: pointer;
   height: 2rem;
+}
+
+.decorative-icon{
+  height: 2rem;
+  cursor: default;
 }
 
 /* BUTTONS STYLING */
@@ -245,6 +252,7 @@ section {
 }
 
 .btn:hover {
+  cursor: pointer;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
@@ -282,6 +290,8 @@ section {
 
 
 /* ABOUT SECTION STYLING */
+
+
 
 #about {
   position: relative;
@@ -338,6 +348,44 @@ section {
   width: 400px;
   margin: auto 0;
 }
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.skill-icon {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.2s;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+.skill-name {
+  font-size: 14px;
+  color: #333; /* Adjust color as needed */
+}
+
+.skills-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
 
 /* EDUCATION STYLING */
 
@@ -401,7 +449,14 @@ section {
   margin-left: 60px;
   position: relative;
   z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
+
+.timeline-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3), 0 6px 15px rgba(0, 0, 0, 0.2); /* Optional shadow change on hover */
+}
+
 
 /* Connecting Line */
 .timeline-item::after {
@@ -437,7 +492,6 @@ section {
   font-weight: bold;
   color: #333;
 }
-
 
 
 /* CONTACT STYLING */

@@ -113,7 +113,6 @@
   }
 }
 
-
 /* Adjust animation duration on smaller screens */
 @media (max-width: 768px) {
   #profile .section__pic-container {
@@ -122,5 +121,15 @@
 
   #about .about-details-container {
     animation: slideUp 1.5s ease-out;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    margin-bottom: 30px; /* Increase this value for more space below About section */
+  }
+
+  .contact-section {
+    margin-top: 30px; /* Increase this value for more space above Contact section */
   }
 }
