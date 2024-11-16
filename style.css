@@ -383,6 +383,124 @@ section {
   margin-bottom: 10px;
 }
 
+/* PROJECTS STYLING */
+
+#projects {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures responsive wrapping of content */
+  margin: 0 auto; /* Centers the container horizontally in its parent */
+  max-width: 1200px; /* Optional: Limits the container width for better alignment */
+  padding: 20px; /* Adds spacing inside the container */
+}
+
+
+.projects-buttons {
+  flex: 1;
+  min-width: 150px;
+  margin-right: 20px;
+}
+
+.project-btn {
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  width: 150px;
+  min-width: 120px;
+  background-color: #4773c5;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px 10px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-btn.active {
+  background-color: #4773c5ba;
+  
+}
+
+.project-btn:hover {
+  background-color: #0056b3;
+  transform: translateX(10px);
+  
+}
+
+.projects-details {
+  flex: 3;
+  min-width: 250px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.project-detail {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.project-detail.active {
+  display: block;
+}
+
+.project-img {
+  flex: 1;
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.project-text {
+  flex: 2;
+}
+
+.project-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-text p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Ensure responsive layout */
+@media screen and (max-width: 768px) {
+  .project-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-img {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .project-text {
+    text-align: center;
+  }
+}
 
 
 

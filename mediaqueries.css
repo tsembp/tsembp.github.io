@@ -133,3 +133,19 @@
     margin-top: 30px; /* Increase this value for more space above Contact section */
   }
 }
+
+@media screen and (max-width: 768px) {
+  /* Ensure buttons are side by side */
+  .projects-buttons {
+    display: flex; /* Use flexbox to arrange buttons */
+    flex-wrap: wrap; /* Allow wrapping if there are too many buttons */
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Add space between buttons */
+  }
+
+  .project-btn {
+    flex: 1; /* Allow buttons to stretch equally */
+    max-width: calc(50% - 10px); /* Ensure buttons take 50% of the width minus the gap */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+}
