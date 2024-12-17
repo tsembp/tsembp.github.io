@@ -46,17 +46,30 @@ nav {
 }
 
 a {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  text-decoration-color: white;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  width: 0%;
+  height: 2px; 
+  background-color: rgb(181, 181, 181);
+  transition: width 0.3s ease-in-out; 
+}
+
+a:hover::after {
+  width: 100%; 
 }
 
 a:hover {
   color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
 }
+
 
 .logo {
   font-size: 2rem;
@@ -444,6 +457,10 @@ section {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  border-radius: 30px;
+  background: #ffff;
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
 }
 
 .project-content {
