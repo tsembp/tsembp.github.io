@@ -156,12 +156,40 @@
       <h1 class="title">Projects</h1>
       <div class="projects-container">
         <div class="projects-buttons">
-          <button class="project-btn active" onclick="showProject('todoApp')">Todo App</button>
-          <button class="project-btn" onclick="showProject('websiteProject')">Website Project</button>
-          <button class="project-btn" onclick="showProject('otherProject')">Other Project</button>
+          <button class="project-btn active" onclick="showProject('studentGradingSystem')">
+            <img src="./assets/button-icon.png" alt="button-icon" class="icon">
+            <span>Student Grading System</span>
+          </button>
+          <button class="project-btn" onclick="showProject('todoApp')">
+            <img src="./assets/button-icon.png" alt="button-icon" class="icon">
+            <span>Todo App</span>
+          </button>
+          <button class="project-btn" onclick="showProject('otherProject')">
+            <img src="./assets/button-icon.png" alt="button-icon" class="icon">
+            <span>Other Projects</span>
+          </button>
         </div>
         <div class="projects-details">
-          <div id="todoApp" class="project-detail active">
+          <div id="studentGradingSystem" class="project-detail active">
+            <div class="project-content">
+              <video class="project-video" controls>
+                <source src="./assets/student-grading-system-showcase.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="project-text">
+                <h3>🧑‍🎓 Student Grading System</h3>
+                <p>A comprehensive Java-based application designed to manage students, courses, and grades. 
+                  Users can add students and courses, assign students to courses, and input grades. The application 
+                  features an intuitive GUI built with JavaFX and CSS for easy interaction. This project will be 
+                  continuously updated with new features to expand its functionality and scalability into a more 
+                  advanced system.
+                  You can view this project's GitHub repository by clicking 
+                  <a href="https://github.com/tsembp/Student-Grading-System" target="_blank" style="color: blue; text-decoration: none;">here</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="todoApp" class="project-detail">
             <div class="project-content">
               <img src="./assets/todo-app.png" alt="Todo App Screenshot" class="project-img">
               <div class="project-text">
@@ -174,29 +202,18 @@
               </div>
             </div>
           </div>
-          <div id="websiteProject" class="project-detail">
-            <div class="project-content">
-              <img src="./assets/website-project.png" alt="Website Project Screenshot" class="project-img">
-              <div class="project-text">
-                <h3>🌐 Landing Page Project</h3>
-                <p>A fully responsive portfolio website/landing page showcasing my skills and projects using HTML, CSS
-                  and a tiny bit of JavaScript for button on-click functions. This project started as a self-paced 
-                  learning exercise based on a beginner-friendly YouTube tutorial. I plan to continue expanding my
-                  knowledge in HTML, CSS and JavaScript in order to improve this website and take it to the next level. You
-                  can view this project's GitHub repository by clicking 
-                  <a href="https://github.com/tsembp/tsembp.github.io" target="_blank" style="color: blue; text-decoration: none;">here</a>.
-                </p>
-              </div>
-            </div>
-          </div>
           <div id="otherProject" class="project-detail">
             <div class="project-content">
               <div class="project-text">
-                <h3>🗂️ Other Projects</h3>
-                <p>I'm currently developing a Student Grading System using Java. The project is still in its
-                  early stages, but eventually it will be released. You can find other collaborative and non-collaborative
-                  projects assigned from my University tutors during my 1st and 2nd year of studies in my GitHub
-                  profile, click <a href="https://github.com/tsembp?tab=repositories" target="_blank" style="color: blue; text-decoration: none;">here</a> to redirect.
+                <h3>🚀 Other Projects</h3>
+                <p>Additional projects include:</p>
+                <ul>
+                  <li>Search Engine Implementation using TrieTree</li>
+                  <li>Automated Latin Square Game</li>
+                  <li>Chemical Formula Processor</li>
+                </ul>
+                <p>Each one showcases different aspects of problem-solving, algorithms, and application development. You
+                  can view the repositories for the above projects in my <a href="https://github.com/tsembp" target="_blank" style="color: blue; text-decoration: none;">GitHub</a> Profile
                 </p>
               </div>
             </div>
