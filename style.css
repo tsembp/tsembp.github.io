@@ -8,6 +8,7 @@
 }
 
 body {
+  background-color: #171717;
   font-family: "Poppins", sans-serif;
 }
 
@@ -16,7 +17,11 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: #DADADA;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFFFFF;
 }
 
 /* BUTTONS  TRANSITION */
@@ -33,20 +38,46 @@ nav,
   display: flex;
 }
 
+.nav-links {
+  gap: 0.5rem;
+}
+
+.nav-links li {
+  list-style: none;
+  padding: 0 1rem;
+}
+
 nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
 }
 
-.nav-links {
+.nav-links a{
+  color: #FFC107;
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  position: relative;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(181, 181, 181);
+  transition: width 0.3s ease-in-out;
 }
 
 a {
-  color: rgb(0, 0, 0);
+  color: #FFC107;
   text-decoration: none;
   position: relative;
 }
@@ -72,6 +103,7 @@ a:hover {
 
 
 .logo {
+  color:rgb(86, 86, 86);
   font-size: 2rem;
 }
 
@@ -180,6 +212,7 @@ section {
   display: flex;
 }
 
+
 /* PROFILE SECTION STYLING */
 
 #profile {
@@ -187,7 +220,6 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
-  
 }
 
 .section__pic-container {
@@ -302,11 +334,14 @@ section {
 
 
 /* ABOUT SECTION STYLING */
-
-
-
 #about {
   position: relative;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: rgb(86, 86, 86);
 }
 
 .about-containers {
@@ -431,10 +466,9 @@ section {
   margin-bottom: 10px;
   width: auto; /* Allow the button to expand based on content */
   min-width: 120px; /* Set a minimum width for the button */
-  color: #000000;
+  color: #ffffff;
   border: none;
-  border-radius: 2rem;
-  background-color: #ffffff;
+  background-color: #171717;
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -460,8 +494,6 @@ section {
   left: 0;
   width: 0; /* Initially, the line is not visible */
   height: 2px; /* Height of the underline */
-  background-color: #5C0092; /* Blue color for the underline */
-  transition: width 0.4s ease-out; /* Smooth transition for the line's width */
 }
 
 .project-btn:hover::after {
@@ -472,14 +504,11 @@ section {
 .projects-details {
   flex: 3;
   min-width: 250px;
-  background-color: #fff;
+  background-color: #272727;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 30px;
-  background: #ffff;
-  box-shadow: 15px 15px 30px #bebebe,
-             -15px -15px 30px #ffffff;
 }
 
 .project-content {
@@ -521,13 +550,13 @@ section {
 .project-text h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #ffffff;
 }
 
 .project-text p {
   font-size: 1rem;
   line-height: 1.4;
-  color: #555;
+  color: #ffffff;
 }
 
 /* Ensure responsive layout */
@@ -559,7 +588,7 @@ section {
 #education h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #333;
+  color: rgb(86, 86, 86);
 }
 
 /* Timeline Container */
@@ -677,14 +706,18 @@ section {
   padding: 0.5rem;
 }
 
-.contact-info-container {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 0.5rem;
+.contact-info-container a {
+  color: #333;
+  text-decoration: none;
+  position: static;
+}
+
+.contact-info-container a:hover {
+  color: #333;
+}
+
+.contact-info-container a::after {
+  display: none;
 }
 
 .contact-info-container p {
