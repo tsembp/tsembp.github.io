@@ -40,6 +40,8 @@
         </div>
       </div>
     </nav>
+
+    <!-- PROFILE -->
     <section id = "profile">
       <div class = "section__pic-container">
         <img src="./assets/profile-pic.JPEG" alt="Panagiotis Tsembekis profile picture">
@@ -66,33 +68,8 @@
         </div>
       </div>
     </section>
-    <section id="education">
-      <div class="education-container">
-        <div class="section-header">
-          <img src="./assets/education-icon.png" alt="Education Icon, Icon made by Pixel perfect from www.flaticon.com" class="decorative-icon">
-          <h2>Education</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>University of Cyprus</h3>
-              <h4>B.Sc. Degree 2023-Present</h4>
-              <p>> Computer Science, 2nd Year</p>
-              <p>> Relevant courses include Data Structures and Algorithms, Object-Oriented Programming, C Programming, Computer Organization and Assembly Programming, Discrete Mathematics, Calculus I & II, Linear Algebra, and Probability and Statistics.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Apostolos Varnavas Lyceum</h3>
-              <h4>High School Diploma | 2019-2022</h4>
-              <p>> Informatics, Networks, Physics, Math, Modern Greek</p>
-              <p>> Graduated with 19.22/20 GPA</p>
-              <p>> Achieved 11th highest score, 19.41/20, in the Pancyprian Examinations for Computer Science</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
+    <!-- ABOUT -->
     <section id="about">
       <div class="section-header">
         <img src="./assets/about-icon.png" alt="About icon downloaded from flaticon.com" class="decorative-icon">
@@ -166,46 +143,186 @@
         onclick="location.href='./#contact'"
       />
     </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="experience-container">
+        <div class="section-header">
+          <img src="./assets/experience.png" alt="Experience Icon" class="decorative-icon">
+          <h2>Experience</h2>
+        </div>
+        <div class="experience-timeline">
+          <!-- gaddr -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="company-logo">
+                <img src="./assets/gaddr-logo.png" alt="UCY Logo">
+              </div>
+              <div class="experience-title">
+                <h3>Full Stack Developer Intern</h3>
+                <h4>Gaddr</h4>
+                <p class="duration">January 2025 - Present</p>
+              </div>
+            </div>
+            <div class="experience-details">
+              <ul>
+                <li>Developed and maintained both backend and frontend services for Gaddr, a social media management platform.</li>
+                <li>Replaced AWS-based authentication functions with custom implementations.</li>
+                <li>Built and tested RESTful API endpoints using SwaggerUI, Postman and pgAdmin4.</li>
+                <li>Collaborated on new features, bug fixes, and developing the 'Explore' page.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- mt webworks -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="company-logo">
+                <img src="./assets/mtwebworks-logo.png" alt="UCY Logo">
+              </div>
+              <div class="experience-title">
+                <h3>Co-Founder & Web Developer</h3>
+                <h4>MT Webworks
+                  <a href="https://mt-webworks.com" target="_blank" class="company-link">
+                    <img src="./assets/external-link.png" alt="External Link" class="external-link-icon">
+                    Visit Website
+                </a>
+                </h4>
+                <p class="duration">June 2024 - Present</p>
+              </div>
+            </div>
+            <div class="experience-details">
+              <ul>
+                <li>Co-founded MT Webworks, a web development agency specializing in modern, tailored website solutions, securing our first customer within just two weeks of establishment.</li>
+                <li>Collaborated closely with a teammate to design, develop, and deploy custom websites, tailored to each client's needs.</li>
+                <li>Developed 5+ custom websites, attracting 120+ monthly visitors each.</li>
+                <li>Integrated a seamless, user-friendly booking logic, enabling a client to achieve an average of 5 extra lesson reservations per moth.</li>
+                <li>Provided ongoing maintenance, updates, and support, ensuring client satisfaction and fostering long-term partnerships.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="education-container">
+        <div class="section-header">
+          <img src="./assets/education-icon.png" alt="Education Icon, Icon made by Pixel perfect from www.flaticon.com" class="decorative-icon">
+          <h2>Education</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>University of Cyprus</h3>
+              <h4>B.Sc. Degree 2023-Present</h4>
+              <p>> Computer Science, 2nd Year</p>
+              <p>> Relevant courses include Data Structures and Algorithms, Object-Oriented Programming, C Programming, Computer Organization and Assembly Programming, Discrete Mathematics, Calculus I & II, Linear Algebra, and Probability and Statistics.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Apostolos Varnavas Lyceum</h3>
+              <h4>High School Diploma | 2019-2022</h4>
+              <p>> Informatics, Networks, Physics, Math, Modern Greek</p>
+              <p>> Graduated with 19.22/20 GPA</p>
+              <p>> Achieved 11th highest score, 19.41/20, in the Pancyprian Examinations for Computer Science</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- PROJECTS -->
     <section id="projects">
       <p class="section__text__p1">Explore My Work</p>
       <h1 class="title">Projects</h1>
       <div class="projects-container">
         <div class="projects-buttons">
-          <button class="project-btn active" onclick="showProject('studentGradingSystem')">
+          <button class="project-btn active" onclick="showProject('jobApplicationTracker')">
+            <img src="./assets/button-icon.png" alt="button-icon" class="icon">
+            <span>Job Application Tracker</span>
+          </button>
+          <button class="project-btn" onclick="showProject('studentGradingSystem')">
             <img src="./assets/button-icon.png" alt="button-icon" class="icon">
             <span>Student Grading System</span>
           </button>
-          <button class="project-btn" onclick="showProject('todoApp')">
+          <!-- <button class="project-btn" onclick="showProject('todoApp')">
             <img src="./assets/button-icon.png" alt="button-icon" class="icon">
             <span>Todo App</span>
-          </button>
+          </button> -->
           <button class="project-btn" onclick="showProject('otherProject')">
             <img src="./assets/button-icon.png" alt="button-icon" class="icon">
             <span>Other Projects</span>
           </button>
         </div>
+
+        <!-- projects details -->
         <div class="projects-details">
-          <div id="studentGradingSystem" class="project-detail active">
+          <!-- job application tracker -->
+          <div id="jobApplicationTracker" class="project-detail active">
             <div class="project-content">
               <video class="project-video" controls>
-                <source src="./assets/student-grading-system-showcase.mp4" type="video/mp4">
+                <source src="./assets/job-app-tracker-preview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="project-text">
+                <h3>💼 Job Application Tracker</h3>
+                <p>A full-stack web application designed to help manage and track job applications 
+                  efficiently. 
+                  
+                  <br><br>The idea came to me during my internship hunt, as I struggled to stay 
+                  organized with the companies I had applied to and the key details for each opportunity.
+                  
+                  <br><br>The web app offers users the ability to add, update, and delete job applications, track the status of 
+                  each one and view detailed insights on the dashboard. 
+                  You can view this project's GitHub repository by clicking 
+                  <a href="https://github.com/tsembp/Job-Application-Tracker" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">MySQL</span>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- student grading system -->
+          <div id="studentGradingSystem" class="project-detail">
+            <div class="project-content">
+              <video class="project-video" controls>
+                <source src="./assets/student-grading-system-preview.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <div class="project-text">
                 <h3>🧑‍🎓 Student Grading System</h3>
-                <p>This Java-based application manages students, courses, and grades with MySQL database 
-                  integration. Users can add, remove, and edit student and course details, assign students 
-                  to courses, and input grades. The simple GUI, built with JavaFX and styled with CSS, 
-                  ensures easy interaction. MySQL stores all data, providing persistent storage and seamless 
-                  retrieval. The application is scalable and will be continuously updated with new features 
-                  to enhance functionality and performance.
+                <p>A comprehensive application designed to streamline the management of student, teacher and courses 
+                  records and student grades.
+
+                  <br><br>The system features secure login for Admin, Teacher and Student users. Each role has access to specific
+                  features based on permissions. 
+                  
+                  <br><br>Admins can perform CRUD (create, read, update, delete) operations on student and 
+                  teacher records, create courses and assign those courses to teachers and/or students. Teachers can view and grade 
+                  students who are enrolled to their course while students can only view their grades and course information.
+                  
                   You can view this project's GitHub repository by clicking 
                   <a href="https://github.com/tsembp/Student-Grading-System" target="_blank" style="color: blue; text-decoration: none;">here</a>.
                 </p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">MySQL</span>
+              </div>
               </div>
             </div>
           </div>
-          <div id="todoApp" class="project-detail">
+          <!-- <div id="todoApp" class="project-detail">
             <div class="project-content">
               <img src="./assets/todo-app.png" alt="Todo App Screenshot" class="project-img">
               <div class="project-text">
@@ -217,16 +334,17 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
           <div id="otherProject" class="project-detail">
             <div class="project-content">
               <div class="project-text">
                 <h3>🚀 Other Projects</h3>
                 <p>Additional projects include:</p>
                 <ul>
-                  <li>Search Engine Implementation using TrieTree</li>
-                  <li>Automated Latin Square Game</li>
-                  <li>Chemical Formula Processor</li>
+                  <li>Strong password generator [Python]</li>
+                  <li>Search Engine Implementation using TrieTree [Java]</li>
+                  <li>Automated Latin Square Game [Java]</li>
+                  <li>Chemical Formula Processor [Java]</li>
                 </ul>
                 <p>Each one showcases different aspects of problem-solving, algorithms, and application development. You
                   can view the repositories for the above projects in my <a href="https://github.com/tsembp" target="_blank" style="color: blue; text-decoration: none;">GitHub</a> Profile
