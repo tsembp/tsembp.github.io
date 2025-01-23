@@ -18,6 +18,7 @@
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -34,6 +35,7 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#education" onclick="toggleMenu()">Education</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -233,12 +235,12 @@
       </div>
     </section>
 
-    
-
     <!-- PROJECTS -->
     <section id="projects">
-      <p class="section__text__p1">Explore My Work</p>
-      <h1 class="title">Projects</h1>
+      <div class="section-header">
+          <img src="./assets/projects-icon.png" alt="Projects Icon, Icon made by Flaticon from www.flaticon.com" class="decorative-icon">
+          <h2>Projects</h2>
+      </div>
       <div class="projects-container">
         <div class="projects-buttons">
           <button class="project-btn active" onclick="showProject('jobApplicationTracker')">
@@ -355,19 +357,37 @@
         </div>
       </div>
     </section>
-    <section id = "contact">
-        <p class = "section__text__p1">Get In Touch</p>
-        <h1 class = "title">Contact Me</h1>
-        <div class = "contact-info-upper-container">
-          <div class = "contact-info-container">
-            <img src="./assets/email.png" alt="Email Icon" class = "icon contact-icon email-icon">
-            <p><a href="mailto:panagiotistsembekis45@gmail.com">panagiotistsembekis45@gmail.com</a></p>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <img src="./assets/contact-icon.png" alt="Contact Icon" class="decorative-icon">
+        <h2>Let's Connect</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-content">
+          <div class="contact-text">
+            <h3>Get In Touch</h3>
+            <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
           </div>
-          <div class = "contact-info-container">
-            <img src="./assets/linkedin.png" alt="LiknedIn Icon" class = "icon contact-icon">
-            <p><a href="https://www.linkedin.com/in/panagiotis-tsembekis/">LinkedIn</a></p>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <img src="./assets/email.png" alt="Email Icon" class="contact-card-icon">
+              <h4>Email</h4>
+              <a href="mailto:panagiotistsembekis45@gmail.com">panagiotistsembekis45@gmail.com</a>
+            </div>
+            <div class="contact-card">
+              <img src="./assets/linkedin.png" alt="LinkedIn Icon" class="contact-card-icon">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/panagiotis-tsembekis/" target="_blank">Connect with me</a>
+            </div>
+            <div class="contact-card">
+              <img src="./assets/github.png" alt="GitHub Icon" class="contact-card-icon">
+              <h4>GitHub</h4>
+              <a href="https://github.com/tsembp" target="_blank">View my work</a>
+            </div>
           </div>
         </div>
+      </div>
     </section>
     <footer>
       <nav>
