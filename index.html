@@ -8,9 +8,9 @@
 
     <link rel="icon" href="favicon.png" type="image/png">
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/mediaqueries.css" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -56,7 +56,7 @@
         <div class = "btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/Panagiotis Tsembekis - 2025.pdf')"
+            onclick="window.open('./assets/Panagiotis_Tsembekis.pdf')"
           >
             Download CV
           </button>
@@ -153,27 +153,6 @@
           <h2>Experience</h2>
         </div>
         <div class="experience-timeline">
-          <!-- gaddr -->
-          <div class="experience-card">
-            <div class="experience-header">
-              <div class="company-logo">
-                <img src="./assets/gaddr-logo.png" alt="UCY Logo">
-              </div>
-              <div class="experience-title">
-                <h3>Full Stack Developer Intern</h3>
-                <h4>Gaddr</h4>
-                <p class="duration">January 2025 - Present</p>
-              </div>
-            </div>
-            <div class="experience-details">
-              <ul>
-                <li>Developed and maintained both backend and frontend services for Gaddr, a social media management platform.</li>
-                <li>Replaced AWS-based authentication functions with custom implementations.</li>
-                <li>Built and tested RESTful API endpoints using SwaggerUI, Postman and pgAdmin4.</li>
-                <li>Collaborated on new features, bug fixes, and developing the 'Explore' page.</li>
-              </ul>
-            </div>
-          </div>
           <!-- mt webworks -->
           <div class="experience-card">
             <div class="experience-header">
@@ -193,9 +172,29 @@
             </div>
             <div class="experience-details">
               <ul>
-                <li>Co-founded MT Webworks, a web development agency specializing in modern, tailored website solutions, securing our first customer within just two weeks of establishment.</li>
-                <li>Developed and deployed 5+ custom websites, increasing client lesson reservations by ~5 per month and driving 110+ visitors per website each month.</li>
-                <li>Delivering ongoing website maintenance, and technical support, ensuring long-term client satisfaction and retention.</li>
+                <li>Co-founded MT Webworks, delivering and maintaining <strong>5+ custom websites</strong> tailored to clients' needs and preferences.</li>
+                <li>Increased client website traffic by <strong>45% in 30 days</strong>, driving <strong>1,107 site sessions</strong> and securing <strong>805 unique visitors</strong>.</li>
+                <li>Enhanced client <strong>engagement metrics by 67%</strong>, achieving 35 clicks to contact within a month.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- gaddr -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="company-logo">
+                <img src="./assets/gaddr-logo.png" alt="UCY Logo">
+              </div>
+              <div class="experience-title">
+                <h3>Full Stack Developer Intern</h3>
+                <h4>Gaddr</h4>
+                <p class="duration">January 2025 - February 2025</p>
+              </div>
+            </div>
+            <div class="experience-details">
+              <ul>
+                <li>Replaced AWS-based authentication functions with custom JavaScript implementations.</li>
+                <li>Built and tested RESTful API endpoints using SwaggerUI, Postman and pgAdmin4.</li>
+                <li>Collaborated on new features, bug fixes, and developing the 'Explore' page using GitHub for version control and code reviews.</li>
               </ul>
             </div>
           </div>
@@ -214,7 +213,7 @@
           <div class="timeline-item">
             <div class="timeline-content">
               <h3>University of Cyprus</h3>
-              <h4>B.Sc. Degree 2023-Present</h4>
+              <h4>B.Sc. Degree | 2023-Present</h4>
               <ul>
                 <li>Computer Science, 2nd Year</li>
                 <li>Completed courses include Data Structures and Algorithms, Object-Oriented Programming, C Programming, Computer Organization and Assembly Programming, Discrete Mathematics, Calculus I & II, Linear Algebra, and Probability and Statistics.</li>
@@ -239,114 +238,166 @@
     <!-- PROJECTS -->
     <section id="projects">
       <div class="section-header">
-          <img src="./assets/projects-icon.png" alt="Projects Icon, Icon made by Flaticon from www.flaticon.com" class="decorative-icon">
-          <h2>Projects</h2>
+        <img src="./assets/projects-icon.png" alt="Project Icon, Icon made by Pixel perfect from www.flaticon.com" class="decorative-icon">
+        <h2>Projects</h2>
       </div>
       <div class="projects-container">
-        <div class="projects-buttons">
-          <button class="project-btn active" onclick="showProject('jobApplicationTracker')">
-            <img src="./assets/button-icon.png" alt="button-icon" class="icon">
-            <span>Job Application Tracker</span>
-          </button>
-          <button class="project-btn" onclick="showProject('studentGradingSystem')">
-            <img src="./assets/button-icon.png" alt="button-icon" class="icon">
-            <span>Student Grading System</span>
-          </button>
-          <!-- <button class="project-btn" onclick="showProject('todoApp')">
-            <img src="./assets/button-icon.png" alt="button-icon" class="icon">
-            <span>Todo App</span>
-          </button> -->
-          <button class="project-btn" onclick="showProject('otherProject')">
-            <img src="./assets/button-icon.png" alt="button-icon" class="icon">
-            <span>Other Projects</span>
-          </button>
+        <div class="tabs-container">
+          <div class="tabs">
+            <button class="tab active" onclick="switchTab(event, 'digitalWardrobe')">Digital Wardrobe</button>
+            <button class="tab" onclick="switchTab(event, 'jobApplicationTracker')">Job Application Tracker</button>
+            <button class="tab" onclick="switchTab(event, 'studentGradingSystem')">Student Grading System</button>
+            <button class="tab" onclick="switchTab(event, 'triviaQuizApp')">Trivia Quiz App</button>
+            <button class="tab" onclick="switchTab(event, 'others')">Others</button>
+          </div>
         </div>
-
-        <!-- projects details -->
-        <div class="projects-details">
-          <!-- job application tracker -->
-          <div id="jobApplicationTracker" class="project-detail active">
-            <div class="project-content">
-              
-              <div class="project-text">
-                <h3>💼 Job Application Tracker</h3>
-                <p>A full-stack web application designed to help manage and track job applications 
-                  efficiently. 
-                  
-                  <br><br>The idea came to me during my internship hunt, as I struggled to stay 
-                  organized with the companies I had applied to and the key details for each opportunity.
-                  
-                  <br><br>The web app offers users the ability to add, update, and delete job applications, track the status of 
-                  each one and view detailed insights on the dashboard. 
-                  You can view this project's GitHub repository by clicking 
-                  <a href="https://github.com/tsembp/Job-Application-Tracker" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
-                </p>
-                <div class="tech-stack">
-                  <span class="tech-tag">Java</span>
-                  <span class="tech-tag">Spring Boot</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">HTML</span>
-                  <span class="tech-tag">CSS</span>
-                  <span class="tech-tag">MySQL</span>
-                </div>
-              </div>
-              <video class="project-video" controls>
-                <source src="./assets/job-app-tracker-preview.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+        <div class="tab-content">
+          <!-- digital wardrobe -->
+          <div id="digitalWardrobe" class="tab-pane active">
+            <h3>👕 Digital Wardrobe</h3>
+            <h5>Under development...</h5>
+            <p>Currently developing an innovative web application designed to revolutionize outfit 
+              planning and management. The app aims to provide a seamless and engaging experience, 
+              helping users organize their wardrobe and make confident style choices.  
+                      
+              <br><br>Key features include:
+            </p>
+            <ul>
+              <li><strong>Clothing Management:</strong> Upload, categorize, and organize clothing items by type (e.g., shirts, pants, shoes) with image support.</li>
+              <li><strong>Outfit Creation:</strong> Mix and match clothing pieces to create and save complete outfits, with options to add detailed descriptions.</li>
+              <li><strong>Outfit Tracking:</strong> Log outfits as worn on specific dates or plan for future events, ensuring you never repeat an outfit unintentionally.</li>
+              <li><strong>AI-Powered Suggestions:</strong> Receive personalized outfit recommendations tailored to occasions, local dress codes, weather conditions, and more.</li>
+              <li><strong>Cloud Storage:</strong> Utilize Firebase Storage to store images for clothing pieces. </li>
+            </ul>
+            <p>
+              You can view this project's GitHub repository by clicking
+              <a href="https://github.com/tsembp/Digital-Wardrobe" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
+            </p>
+            <div class="tech-stack">
+                      <span class="tech-tag">Java</span>
+                      <span class="tech-tag">Spring Boot</span>
+                      <span class="tech-tag">JavaScript</span>
+                      <span class="tech-tag">HTML</span>
+                      <span class="tech-tag">CSS</span>
+                      <span class="tech-tag">PostgreSQL</span>
             </div>
           </div>
-          <!-- student grading system -->
-          <div id="studentGradingSystem" class="project-detail">
-            <div class="project-content">
-              
-              <div class="project-text">
-                <h3>🧑‍🎓 Student Grading System</h3>
-                <p>A comprehensive application designed to streamline the management of student, teacher and courses 
-                  records and student grades.
 
-                  <br><br>The system features secure login for Admin, Teacher and Student users. Each role has access to specific
-                  features based on permissions. 
-                  
-                  <br><br>Admins can perform CRUD (create, read, update, delete) operations on student and 
-                  teacher records, create courses and assign those courses to teachers and/or students. Teachers can view and grade 
-                  students who are enrolled to their course while students can only view their grades and course information.
-                  
-                  You can view this project's GitHub repository by clicking 
-                  <a href="https://github.com/tsembp/Student-Grading-System" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
-                </p>
-                <div class="tech-stack">
-                  <span class="tech-tag">Java</span>
-                  <span class="tech-tag">CSS</span>
-                  <span class="tech-tag">MySQL</span>
-                </div>
-              </div>
-              <video class="project-video" controls>
-                <source src="./assets/student-grading-system-preview.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+          <!-- job app tracker -->
+          <div id="jobApplicationTracker" class="tab-pane">
+            <h3>💼 Job Application Tracker</h3>
+            <h5>January 2025</h5>
+            <p>A full-stack web application designed to help manage and track job applications 
+              efficiently.The idea came to me during my internship hunt, as I struggled to stay 
+              organized with the companies I had applied to and the key details for each opportunity.
+
+              <br><br>Key features include:
+            </p>
+            <ul>
+              <li><strong>CRUD Operations:</strong> Create, update, and delete job application entries effortlessly.</li>
+              <li><strong>Advanced Filtering:</strong> Filter applications by status, job type, location, or search for specific keywords/phrases.</li>
+              <li><strong>Data Security:</strong> MySQL integration ensures safe and secure storage of job application records. </li>
+              <li><strong>Export Functionality:</strong> Export job applications in CSV format for offline access.</li>
+              <li><strong>Data Insights:</strong> Visualize your progress with charts and numerical statistics to gain insights into your applications.</li>
+            </ul>
+            <p>
+              You can view this project's GitHub repository by clicking
+              <a href="https://github.com/tsembp/Job-Application-Tracker" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
+            </p>
+            <video class="project-video" controls>
+              <source src="./assets/job-app-tracker-preview.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="tech-stack">
+                      <span class="tech-tag">Java</span>
+                      <span class="tech-tag">Spring Boot</span>
+                      <span class="tech-tag">JavaScript</span>
+                      <span class="tech-tag">HTML</span>
+                      <span class="tech-tag">CSS</span>
+                      <span class="tech-tag">MySQL</span>
             </div>
           </div>
-          <div id="otherProject" class="project-detail">
-            <div class="project-content">
-              <div class="project-text">
-                <h3>🚀 Other Projects</h3>
-                <p>Additional projects include:</p>
-                <ul>
-                  <li>Strong password generator [Python]</li>
-                  <li>Search Engine Implementation using TrieTree [Java]</li>
-                  <li>Automated Latin Square Game [Java]</li>
-                  <li>Chemical Formula Processor [Java]</li>
-                </ul>
-                <p>Each one showcases different aspects of problem-solving, algorithms, and application development. You
-                  can view the repositories for the above projects in my <a href="https://github.com/tsembp" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">GitHub</a> Profile
-                </p>
-              </div>
+
+          <!-- student grading sys -->
+          <div id="studentGradingSystem" class="tab-pane">
+            <h3>🧑‍🎓 Student Grading System</h3>
+            <h5>December 2024 - January 2025</h5>
+            <p>A comprehensive application designed to streamline the management of student, teacher and courses 
+              records and student grades.
+
+              <br><br>Key features include:
+            </p>
+            <ul>
+                <li><strong>Role-based Authentication:</strong> Secure login for Admin, Teacher, and Student users with specific access permissions.</li>
+                <li><strong>Admin Features:</strong> Manage student and teacher records, create courses, and assign courses to teachers and students.</li>
+                <li><strong>Teacher Features:</strong> View and grade students enrolled in their courses.</li>
+                <li><strong>Student Features:</strong> View grades and course information.</li>
+                <li><strong>Course Management:</strong> Create, update, and delete course records.</li>
+                <li><strong>Grade Management:</strong> Input and update student grades for specific courses.</li>
+                <li><strong>Data Security:</strong> Ensure secure storage and access to student and course data.</li>
+            </ul>
+            <p>
+              You can view this project's GitHub repository by clicking
+              <a href="https://github.com/tsembp/Job-Application-Tracker" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
+            </p>
+            <video class="project-video" controls>
+              <source src="./assets/student-grading-system-preview.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="tech-stack">
+                      <span class="tech-tag">Java</span>
+                      <span class="tech-tag">CSS</span>
+                      <span class="tech-tag">MySQL</span>
             </div>
+          </div>
+
+          <div id="triviaQuizApp" class="tab-pane">
+            <h3>🎯 Trivia Quiz App</h3>
+            <h5>January 2025</h5>
+            <p>A Trivia Quiz App built using HTML, CSS, and JavaScript, allowing users to select a quiz category 
+              and test their knowledge with multiple-choice questions fetched from the Open Trivia Database API.
+
+              <br><br>Key features include:
+            </p>
+            <ul>
+                <li><strong>Quiz Category Selection:</strong> Select a quiz category from a dropdown to fetch questions about.</li>
+                <li><strong>Quiz Length:</strong> Select number of questions to be generated.</li>
+                <li><strong>Feedback:</strong> Highlight correct and wrong answers.</li>
+                <li><strong>Score calculation:</strong> Total correct questions answered calculation.</li>
+                <li><strong>Edge case handling:</strong> Error handling such as preventing multiple selections after answering.</li>
+            </ul>
+            <p>
+              You can view this project's GitHub repository by clicking
+              <a href="https://github.com/tsembp/JS-Projects/tree/main/Quiz%20App" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
+            </p>
+            <div class="tech-stack">
+                      <span class="tech-tag">JavaScript</span>
+                      <span class="tech-tag">APIs</span>
+                      <span class="tech-tag">HTML</span>
+                      <span class="tech-tag">CSS</span>
+            </div>
+          </div>
+
+          <!-- others -->
+          <div id="others" class="tab-pane">
+            <h3>💻 Other Projects</h3>
+            <h5>Collections of other projects</h5>
+            <p>Additional knowledge-enhancement projects include:</p>
+            <ul>
+                <li><strong>🧑‍🍳 Recipe Finder:</strong> A Recipe Finder Web App built using HTML, CSS, and JavaScript. It allows users to search for recipes by name and fetches results from the Spoonacular API.</li>
+                <li><strong>🔐 Strong password generator:</strong> A simple Python-based desktop app that generates strong passwords of desired length.</li>
+                <li><strong>🔍 Search Engine Implementation using TrieTree:</strong> As part of the EPL231 - Data Structures & Algorithms course, me and my duo partner developed a simplified search engine using TrieNode Data Structure in Java.</li>
+                <li><strong>🧩 Automated Latin Square Game:</strong> As part of the EPL232 - Programming Techniques & Tools course, I developed an automated Latin Square solver program using Java.</li>
+                <li><strong>🧪 Chemical Formula Processor:</strong> A program that takes as input chemical formulas and breaks them down to individual chemical elements. Done as part of the EPL232 course.</li>
+            </ul>
+            <p>Each one showcases different aspects of problem-solving, algorithms, and application development. You
+              can view the repositories for the above projects in my <a href="https://github.com/tsembp" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">GitHub Profile</a>.
+            </p>
           </div>
         </div>
       </div>
     </section>
+    
     <!-- CONTACT -->
     <section id="contact">
       <div class="section-header">
@@ -379,6 +430,8 @@
         </div>
       </div>
     </section>
+
+    <!-- FOOTER -->
     <footer>
       <nav>
         <div class = "nav-links-container">
@@ -399,7 +452,7 @@
         </button>
       </div>
     </footer>
-    <script src = "script.js"></script>
+    <script src = "/js/script.js"></script>
     </body>
 </html>
 
