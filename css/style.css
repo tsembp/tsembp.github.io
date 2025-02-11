@@ -1058,7 +1058,7 @@ section {
 /* FOOTER SECTION */
 
 .top-btn {
-  background-color: #7587ff;
+  background-color: #565656;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -1069,7 +1069,7 @@ section {
 }
 
 .top-btn:hover {
-  background-color: #444f94;
+  background-color: #FFC107;
   transform: translateY(-2px);
 }
 
