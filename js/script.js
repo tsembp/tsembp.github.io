@@ -1,3 +1,26 @@
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    const topButton = document.getElementById("top-btn");
+
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topButton.style.display = "block";
+        topButton.style.opacity = "1";
+    } else {
+        topButton.style.opacity = "0";
+        setTimeout(() => {
+            if (document.body.scrollTop <= 300 && document.documentElement.scrollTop <= 300) {
+                topButton.style.display = "none";
+            }
+        }, 300);
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
 function toggleMenu(){
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
