@@ -42,19 +42,21 @@ function showProject(projectId) {
 }
 
 function switchTab(event, tabId) {
-    const tabs = document.querySelectorAll('.tab');
-    const panes = document.querySelectorAll('.tab-pane');
+    // Remove active class from all menu items
+    const menuItems = document.getElementsByClassName('project-menu-item');
+    for (let item of menuItems) {
+        item.classList.remove('active');
+    }
 
-    tabs.forEach(tab => tab.classList.remove('active'));
-    panes.forEach(pane => {
-        pane.classList.remove('active');
-        pane.style.opacity = 0;
-    });
-
+    // Add active class to clicked menu item
     event.currentTarget.classList.add('active');
-    const activePane = document.getElementById(tabId);
-    activePane.classList.add('active');
-    setTimeout(() => {
-        activePane.style.opacity = 1;
-    }, 10);
+
+    // Hide all tab panes
+    const tabPanes = document.getElementsByClassName('tab-pane');
+    for (let pane of tabPanes) {
+        pane.classList.remove('active');
+    }
+
+    // Show selected tab pane
+    document.getElementById(tabId).classList.add('active');
 }

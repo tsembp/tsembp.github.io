@@ -240,16 +240,29 @@
         <h2>Projects</h2>
       </div>
       <div class="projects-container">
-        <div class="tabs-container">
-          <div class="tabs">
-            <button class="tab active" onclick="switchTab(event, 'digitalWardrobe')">Digital Wardrobe</button>
-            <button class="tab" onclick="switchTab(event, 'jobApplicationTracker')">Job Application Tracker</button>
-            <button class="tab" onclick="switchTab(event, 'studentGradingSystem')">Student Grading System</button>
-            <button class="tab" onclick="switchTab(event, 'triviaQuizApp')">Trivia Quiz App</button>
-            <button class="tab" onclick="switchTab(event, 'others')">Others</button>
-          </div>
+        <div class="projects-menu">
+          <button class="project-menu-item active" onclick="switchTab(event, 'digitalWardrobe')">
+            <h3>Digital Wardrobe</h3>
+            <p>🔨 Under development...</p>
+          </button>
+          <button class="project-menu-item" onclick="switchTab(event, 'jobApplicationTracker')">
+            <h3>Job Application Tracker</h3>
+            <p>January 2025</p>
+          </button>
+          <button class="project-menu-item" onclick="switchTab(event, 'studentGradingSystem')">
+            <h3>Student Grading System</h3>
+            <p>December 2024 - January 2025</p>
+          </button>
+          <button class="project-menu-item" onclick="switchTab(event, 'triviaQuizApp')">
+            <h3>Trivia Quiz App</h3>
+            <p>January 2025</p>
+          </button>
+          <button class="project-menu-item" onclick="switchTab(event, 'others')">
+            <h3>Other Projects</h3>
+            <p>Collections of other projects</p>
+          </button>
         </div>
-        <div class="tab-content">
+        <div class="project-details">
           <div id="digitalWardrobe" class="tab-pane active">
             <h3>👕 Digital Wardrobe</h3>
             <h5>Under development...</h5>
