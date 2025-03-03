@@ -239,175 +239,92 @@
         <img src="./assets/projects-icon.png" alt="Project Icon, Icon made by Pixel perfect from www.flaticon.com" class="decorative-icon">
         <h2>Projects</h2>
       </div>
-      <div class="projects-container">
-        <div class="projects-menu">
-          <button class="project-menu-item active" onclick="switchTab(event, 'digitalWardrobe')">
+      <div class="projects-grid">
+        <!-- Digital Wardrobe -->
+        <div class="project-card" onclick="openProjectDetails('digitalWardrobe')">
+          <div class="project-card-image">
+            <img src="./assets/projects-preview/digitalwardrobe.jpg" alt="Digital Wardrobe Project">
+            <div class="project-overlay">
+              <i class="fas fa-eye"></i>
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="project-card-content">
             <h3>Digital Wardrobe</h3>
             <p>🔨 Under development...</p>
-          </button>
-          <button class="project-menu-item" onclick="switchTab(event, 'jobApplicationTracker')">
+          </div>
+        </div>
+
+        <!-- Job Application Tracker -->
+        <div class="project-card" onclick="openProjectDetails('jobApplicationTracker')">
+          <div class="project-card-image">
+            <img src="./assets/projects-preview/jobapplicationtracker.png" alt="Job Application Tracker Project">
+            <div class="project-overlay">
+              <i class="fas fa-eye"></i>
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="project-card-content">
             <h3>Job Application Tracker</h3>
             <p>January 2025</p>
-          </button>
-          <button class="project-menu-item" onclick="switchTab(event, 'studentGradingSystem')">
+          </div>
+        </div>
+
+        <!-- Student Grading System -->
+        <div class="project-card" onclick="openProjectDetails('studentGradingSystem')">
+          <div class="project-card-image">
+            <img src="./assets/projects-preview/studentgradingsystem.png" alt="Student Grading System Project">
+            <div class="project-overlay">
+              <i class="fas fa-eye"></i>
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="project-card-content">
             <h3>Student Grading System</h3>
             <p>December 2024 - January 2025</p>
-          </button>
-          <button class="project-menu-item" onclick="switchTab(event, 'triviaQuizApp')">
+          </div>
+        </div>
+
+        <!-- Trivia Quiz App -->
+        <div class="project-card" onclick="openProjectDetails('triviaQuizApp')">
+          <div class="project-card-image">
+            <img src="./assets/projects-preview/quizapp.png" alt="Trivia Quiz App Project">
+            <div class="project-overlay">
+              <i class="fas fa-eye"></i>
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="project-card-content">
             <h3>Trivia Quiz App</h3>
             <p>January 2025</p>
-          </button>
-          <button class="project-menu-item" onclick="switchTab(event, 'others')">
-            <h3>Other Projects</h3>
-            <p>Collections of other projects</p>
-          </button>
+          </div>
         </div>
-        <div class="project-details">
-          <div id="digitalWardrobe" class="tab-pane active">
-            <h3>👕 Digital Wardrobe</h3>
-            <h5>Under development...</h5>
-            <p>Currently developing an innovative web application designed to revolutionize outfit 
-              planning and management. The app aims to provide a seamless and engaging experience, 
-              helping users organize their wardrobe and make confident style choices.  
-                      
-              <br><br>Key features include:
-            </p>
-            <ul>
-              <li><strong>Clothing Management:</strong> Upload, categorize, and organize clothing items by type (e.g., shirts, pants, shoes) with image support.</li>
-              <li><strong>Outfit Creation:</strong> Mix and match clothing pieces to create and save complete outfits, with options to add detailed descriptions.</li>
-              <li><strong>Outfit Tracking:</strong> Log outfits as worn on specific dates or plan for future events, ensuring you never repeat an outfit unintentionally.</li>
-              <li><strong>AI-Powered Suggestions:</strong> Receive personalized outfit recommendations tailored to occasions, local dress codes, weather conditions, and more.</li>
-              <li><strong>Cloud Storage:</strong> Utilize Firebase Storage to store images for clothing pieces. </li>
-            </ul>
-            <p>
-              You can view this project's GitHub repository by clicking
-              <a href="https://github.com/tsembp/Digital-Wardrobe" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
-            </p>
-            <div class="tech-stack">
-                      <span class="tech-tag">Java</span>
-                      <span class="tech-tag">Spring Boot</span>
-                      <span class="tech-tag">JavaScript</span>
-                      <span class="tech-tag">HTML</span>
-                      <span class="tech-tag">CSS</span>
-                      <span class="tech-tag">PostgreSQL</span>
+
+        <!-- Other Projects -->
+        <div class="project-card" onclick="openProjectDetails('others')">
+          <div class="project-card-image">
+            <img src="./assets/projects-preview/newsfeed.png" alt="Other Projects">
+            <div class="project-overlay">
+              <i class="fas fa-eye"></i>
+              <span>View Projects</span>
             </div>
           </div>
-
-          <div id="jobApplicationTracker" class="tab-pane">
-            <h3>💼 Job Application Tracker
-              <a href="https://www.youtube.com/watch?v=RFmE6xdIeuE" target="_blank" class="company-link">
-                <img src="./assets/external-link.png" alt="External Link" class="external-link-icon">
-                Video Preview
-              </a>
-            </h3>
-            <h5>January 2025</h5>
-            <p>A full-stack web application designed to help manage and track job applications 
-              efficiently.The idea came to me during my internship hunt, as I struggled to stay 
-              organized with the companies I had applied to and the key details for each opportunity.
-
-              <br><br>Key features include:
-            </p>
-            <ul>
-              <li><strong>CRUD Operations:</strong> Create, update, and delete job application entries effortlessly.</li>
-              <li><strong>Advanced Filtering:</strong> Filter applications by status, job type, location, or search for specific keywords/phrases.</li>
-              <li><strong>Data Security:</strong> MySQL integration ensures safe and secure storage of job application records. </li>
-              <li><strong>Export Functionality:</strong> Export job applications in CSV format for offline access.</li>
-              <li><strong>Data Insights:</strong> Visualize your progress with charts and numerical statistics to gain insights into your applications.</li>
-            </ul>
-            <p>
-              You can view this project's GitHub repository by clicking
-              <a href="https://github.com/tsembp/Job-Application-Tracker" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
-            </p>
-            <div class="tech-stack">
-                      <span class="tech-tag">Java</span>
-                      <span class="tech-tag">Spring Boot</span>
-                      <span class="tech-tag">JavaScript</span>
-                      <span class="tech-tag">HTML</span>
-                      <span class="tech-tag">CSS</span>
-                      <span class="tech-tag">MySQL</span>
-            </div>
-          </div>
-
-          <div id="studentGradingSystem" class="tab-pane">
-            <h3>🧑‍🎓 Student Grading System
-              <a href="https://www.youtube.com/watch?v=YKvESa6d8vU&list=PLcBZ1qLPGrV2LztfPFz9k5JzIsLqBucF4&ab_channel=PanagiotisTsembekis" target="_blank" class="company-link">
-                <img src="./assets/external-link.png" alt="External Link" class="external-link-icon">
-                Video Preview
-              </a>
-            </h3>
-            <h5>December 2024 - January 2025</h5>
-            <p>A comprehensive application designed to streamline the management of student, teacher and courses 
-              records and student grades.
-
-              <br><br>Key features include:
-            </p>
-            <ul>
-                <li><strong>Role-based Authentication:</strong> Secure login for Admin, Teacher, and Student users with specific access permissions.</li>
-                <li><strong>Admin Features:</strong> Manage student and teacher records, create courses, and assign courses to teachers and students.</li>
-                <li><strong>Teacher Features:</strong> View and grade students enrolled in their courses.</li>
-                <li><strong>Student Features:</strong> View grades and course information.</li>
-                <li><strong>Course Management:</strong> Create, update, and delete course records.</li>
-                <li><strong>Grade Management:</strong> Input and update student grades for specific courses.</li>
-                <li><strong>Data Security:</strong> Ensure secure storage and access to student and course data.</li>
-            </ul>
-            <p>
-              You can view this project's GitHub repository by clicking
-              <a href="https://github.com/tsembp/Student-Grading-System" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
-            </p>
-            <div class="tech-stack">
-                      <span class="tech-tag">Java</span>
-                      <span class="tech-tag">CSS</span>
-                      <span class="tech-tag">MySQL</span>
-            </div>
-          </div>
-
-          <div id="triviaQuizApp" class="tab-pane">
-            <h3>🎯 Trivia Quiz App</h3>
-            <h5>January 2025</h5>
-            <p>A Trivia Quiz App built using HTML, CSS, and JavaScript, allowing users to select a quiz category 
-              and test their knowledge with multiple-choice questions fetched from the Open Trivia Database API.
-
-              <br><br>Key features include:
-            </p>
-            <ul>
-                <li><strong>Quiz Category Selection:</strong> Select a quiz category from a dropdown to fetch questions about.</li>
-                <li><strong>Quiz Length:</strong> Select number of questions to be generated.</li>
-                <li><strong>Feedback:</strong> Highlight correct and wrong answers.</li>
-                <li><strong>Score calculation:</strong> Total correct questions answered calculation.</li>
-                <li><strong>Edge case handling:</strong> Error handling such as preventing multiple selections after answering.</li>
-            </ul>
-            <p>
-              You can view this project's GitHub repository by clicking
-              <a href="https://github.com/tsembp/JS-Projects/tree/main/Quiz%20App" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">here</a>.
-            </p>
-            <div class="tech-stack">
-                      <span class="tech-tag">JavaScript</span>
-                      <span class="tech-tag">APIs</span>
-                      <span class="tech-tag">HTML</span>
-                      <span class="tech-tag">CSS</span>
-            </div>
-          </div>
-
-          <div id="others" class="tab-pane">
-            <h3>💻 Other Projects</h3>
-            <h5>Collections of other projects</h5>
-            <p>Additional knowledge-enhancement projects include:</p>
-            <ul>
-                <li><strong>📰 AI News Feed:</strong> A project that includes a web-scraper that fetches news from sites like BBC, passes them into Gemini.</li>
-                <li><strong>🧑‍🍳 Recipe Finder:</strong> A Recipe Finder Web App built using HTML, CSS, and JavaScript. It allows users to search for recipes by name and fetches results from the Spoonacular API.</li>
-                <li><strong>🔐 Strong password generator:</strong> A simple Python-based desktop app that generates strong passwords of desired length.</li>
-                <li><strong>🔍 Search Engine Implementation using TrieTree:</strong> As part of the EPL231 - Data Structures & Algorithms course, me and my duo partner developed a simplified search engine using TrieNode Data Structure in Java.</li>
-                <li><strong>🧩 Automated Latin Square Game:</strong> As part of the EPL232 - Programming Techniques & Tools course, I developed an automated Latin Square solver program using Java.</li>
-                <li><strong>🧪 Chemical Formula Processor:</strong> A program that takes as input chemical formulas and breaks them down to individual chemical elements. Done as part of the EPL232 course.</li>
-            </ul>
-            <p>Each one showcases different aspects of problem-solving, algorithms, and application development. You
-              can view the repositories for the above projects in my <a href="https://github.com/tsembp" target="_blank" style="color: rgb(119, 119, 255); text-decoration: none;">GitHub Profile</a>.
-            </p>
+          <div class="project-card-content">
+            <h3>Other Projects</h3>
+            <p>Collection of other projects</p>
           </div>
         </div>
       </div>
     </section>
-    
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
     <!-- CONTACT -->
     <section id="contact">
       <div class="section-header">
