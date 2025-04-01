@@ -871,54 +871,101 @@ section {
   color: rgb(86, 86, 86);
 }
 
-/* Experience Section Styling */
+/* Experience Timeline Container */
 .experience-timeline {
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
 }
 
-.experience-card {
-  background-color: #222;
-  border-radius: 15px;
-  padding: 25px;
+/* Vertical Line */
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 2px;
+  height: 100%;
+  background-color: #333;
+}
+
+/* Experience Item */
+.experience-item {
+  display: flex;
   margin-bottom: 30px;
+  position: relative;
+}
+
+/* Dot on the Line */
+.experience-item::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  width: 12px;
+  height: 12px;
+  background-color: #FFC107;
+  border-radius: 100%;
+  box-shadow: 0 0 0 3px #222;
+  z-index: 1;
+}
+
+/* Box Content */
+.experience-content {
+  padding: 15px;
+  background-color: #222;
+  color: #dadada;
+  border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-left: 60px;
+  position: relative;
+  z-index: 2;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience-card:hover {
-  transform: translateY(-5px);
+.experience-content:hover {
+  transform: translateY(-3px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .experience-header {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
 .company-logo img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   object-fit: cover;
 }
 
+.experience-title {
+  flex: 1;
+}
+
 .experience-title h3 {
   color: #FFC107;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
+  font-size: 1.2rem;
 }
 
 .experience-title h4 {
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
+  font-size: 1rem;
 }
 
 .duration {
   color: #888;
   font-size: 0.9rem;
+}
+
+.experience-details {
+  margin-top: 15px;
 }
 
 .experience-details ul {
@@ -931,6 +978,7 @@ section {
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
+  font-size: 0.95rem;
 }
 
 .experience-details li:before {
@@ -960,9 +1008,110 @@ section {
   color: #FFD54F;
 }
 
+/* Connecting Line */
+.experience-item::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 38px;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+}
+
+/* Responsive styles for Experience section */
+@media screen and (max-width: 768px) {
+  #experience {
+    padding: 40px 15px;
+  }
+
+  .experience-timeline::before {
+    left: 20px;
+  }
+
+  .experience-item::before {
+    left: 15px;
+    top: 20px;
+  }
+
+  .experience-content {
+    margin-left: 45px;
+    padding: 12px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .company-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .experience-title h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-title h4 {
+    font-size: 0.9rem;
+  }
+
+  .duration {
+    font-size: 0.8rem;
+  }
+
+  .experience-details li {
+    font-size: 0.9rem;
+  }
+
+  .experience-item::after {
+    left: 28px;
+    width: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #experience {
+    padding: 30px 10px;
+  }
+
+  .experience-timeline::before {
+    left: 15px;
+  }
+
+  .experience-item::before {
+    left: 10px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .experience-content {
+    margin-left: 35px;
+    padding: 10px;
+  }
+
+  .experience-title h3 {
+    font-size: 1rem;
+  }
+
+  .experience-title h4 {
+    font-size: 0.85rem;
+  }
+
+  .experience-details li {
+    font-size: 0.85rem;
+    padding-left: 15px;
+  }
+
+  .experience-item::after {
+    left: 23px;
+    width: 12px;
+  }
+}
 
 /* EDUCATION STYLING */
-
 #education {
   padding: 60px 20px;
   text-align: left;
@@ -988,13 +1137,13 @@ section {
   left: 30px;
   width: 2px;
   height: 100%;
-  background-color: #ddd;
+  background-color: #333;
 }
 
 /* Timeline Item */
 .timeline-item {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -1006,24 +1155,43 @@ section {
   left: 25px;
   width: 12px;
   height: 12px;
-  background-color: #5c0092;
+  background-color: #FFC107;
   border-radius: 100%;
-  box-shadow: 0 0 0 3px #fff;
+  box-shadow: 0 0 0 3px #222;
   z-index: 1;
 }
 
 /* Box Content */
 .timeline-content {
-  padding: 20px;
-  background-color: #222222;
+  padding: 15px;
+  background-color: #222;
   color: #dadada;
-  border-radius: 22px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   width: 100%;
   margin-left: 60px;
   position: relative;
   z-index: 2;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  color: #FFC107;
+  margin: 0 0 8px;
+}
+
+.timeline-content h4 {
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
 }
 
 .timeline-content ul {
@@ -1033,9 +1201,10 @@ section {
 
 .timeline-content li {
   color: #DADADA;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   padding-left: 20px;
   position: relative;
+  font-size: 0.95rem;
 }
 
 .timeline-content li:before {
@@ -1043,11 +1212,6 @@ section {
   position: absolute;
   left: 0;
   color: #FFC107;
-}
-
-.timeline-content:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3), 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Connecting Line */
@@ -1058,33 +1222,8 @@ section {
   left: 38px;
   width: 20px;
   height: 2px;
-  background-color: #ddd;
+  background-color: #333;
 }
-
-/* Text Styles */
-.timeline-content h3 {
-  font-size: 1.5rem;
-  color: #FFC107;
-  margin: 0 0 10px;
-}
-
-.timeline-content h4 {
-  font-size: 1.2rem;
-  color: #888888;
-  margin: 0 0 10px;
-}
-
-.timeline-content p {
-  font-size: 1rem;
-  color: #dadada;
-  margin: 5px 0;
-}
-
-.timeline-content p strong {
-  font-weight: bold;
-  color: #333;
-}
-
 
 /* CONTACT STYLING */
 
