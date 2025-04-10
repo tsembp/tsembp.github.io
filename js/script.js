@@ -88,6 +88,27 @@ function openProjectDetails(projectId) {
 
 function getProjectContent(projectId) {
   const projects = {
+    wgDiscordBot: `
+      <h3>🤖 Wargaming Course - New Task Notifier Discord Bot</h3>
+      <h5>April 2025</h5>
+      <p>A Discord bot that scrapes Wargaming's Backend SWE Course platform for new tasks and 
+        immediately notifies users in our Discord server. The idea came to me after constantly having 
+        to check for updates manually—I wanted a solution that would help not just me, but also the 50 
+        other course participants stay on top of new assignments effortlessly. Currently, the bot runs 
+        locally, and I'm planning to deploy it soon for 24/7 automated monitoring.</p>
+      <br>
+      <p>Key features include:</p>
+      <ul>
+        <li><strong>Automated Monitoring:</strong> Checks for new course tasks every 10 minutes using Selenium web automation.</li>
+        <li><strong>Real-Time Notifications:</strong> Posts instant alerts in a designated Discord channel when new tasks are detected.</li>
+        <li><strong>Task Tracking:</strong> Maintains a record of previously seen tasks to prevent duplicate notifications.</li>
+        <li><strong>Command Interface:</strong> Enables users to retrieve current tasks or check for updates on demand using simple commands.</li>
+      </ul>
+      <div class="tech-stack">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Selenium Web Scraping</span>
+      </div>
+    `,
     digitalWardrobe: `
       <h3>👕 Digital Wardrobe</h3>
       <h5>Under development...</h5>
