@@ -104,6 +104,9 @@ function getProjectContent(projectId) {
         <li><strong>Task Tracking:</strong> Maintains a record of previously seen tasks to prevent duplicate notifications.</li>
         <li><strong>Command Interface:</strong> Enables users to retrieve current tasks or check for updates on demand using simple commands.</li>
       </ul>
+      <p>
+        <a href="https://github.com/tsembp/WG-Course-Task-Notifier-Bot" target="_blank" style="color: #FFC107; text-decoration: none;">View GitHub Repository</a>
+      </p>
       <div class="tech-stack">
         <span class="tech-tag">Python</span>
         <span class="tech-tag">Selenium Web Scraping</span>
