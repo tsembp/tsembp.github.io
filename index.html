@@ -21,7 +21,7 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Education</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -38,7 +38,7 @@
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Education</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -47,210 +47,183 @@
 
     <!-- PROFILE -->
     <section id = "profile">
-      <div class = "section__pic-container">
-        <img src="./assets/profile-pic.JPEG" alt="Panagiotis Tsembekis profile picture">
-      </div>
       <div class = "section__text">
-        <p class = "section__text__p1">Hello I'm</p>
+        <p class = "section__text__p1">👋🏼 Hello I'm</p>
         <h1 class = "title">Panagiotis Tsembekis</h1>
-        <p class = "section__text__p2">Computer Science Student</p>
-        <img src="./assets/UCY-logo.png" alt="UCY Logo" class="ucy-logo">
+        <p class = "section__text__p2">🔹 2nd Year Computer Science Student @ UCY</p>
+        <p class = "section__text__p2">🔹 Software Engineering Intern @ CYENS CoE</p>
         <div class = "btn-container">
           <button
-            class="btn btn-color-2"
+            class="btn btn-color-1"
             onclick="window.open('./assets/Panagiotis_Tsembekis_CV_2025.pdf')"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-2" onclick="location.href='./#contact'">
             Contact Information
           </button>
         </div>
         <div id = "socials-container">
           <img src="./assets/linkedin.png" alt="LinkedIn Profile" class="icon" onclick="window.open('https://www.linkedin.com/in/panagiotis-tsembekis/', '_blank')">
-          <img src="./assets/github.png" alt="GitHub Profile" class="icon" onclick="window.open('https://github.com/tsembp/', '_blank')">
-          <img src="./assets/leetcode-icon.png" alt="Leetcode Profile" class="icon" onclick="window.open('https://leetcode.com/u/tsembp/', '_blank')">
+          <img src="./assets/tech-stack-icons/github.png" alt="GitHub Profile" class="icon" onclick="window.open('https://github.com/tsembp/', '_blank')">
         </div>
+      </div>
+      <div class = "section__pic-container">
+        <img src="./assets/profile-pic.JPEG" alt="Panagiotis Tsembekis profile picture">
       </div>
     </section>
 
+    
     <!-- ABOUT -->
     <section id="about">
       <div class="section-header">
-        <img src="./assets/about-icon.png" alt="About icon downloaded from flaticon.com" class="decorative-icon">
+        <img src="./assets/section-icons/about-icon.png" alt="About icon downloaded from flaticon.com" class="decorative-icon">
         <h2>About</h2>
       </div>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-picture.JPEG"
-            alt="Profile picture"
-            class="about-pic"
-          />
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Who I Am</h3>
+          <ul class="about-list">
+            <li><i class="fas fa-arrow-right"></i> Ambitious and driven 2nd Year Computer Science Student with a strong interest in Software Engineering and AI.</li>
+            <li><i class="fas fa-arrow-right"></i> Currently working as a Software Engineering Intern at CYENS Centre of Excellence within their CAIR Team.</li>
+            <li><i class="fas fa-arrow-right"></i> Alongside my studies, I work on freelance web development projects, focusing on delivering creative and effective solutions.</li>
+          </ul>
         </div>
-        <div class="about-details-container">
-          <div class="text-container">
-            <h3>Ambitious and Driven | 2nd Year Computer Science Student</h3>
-            <p>
-              <br><br>As a Computer Science student @ UCY, I am passionate about Software Development and Artificial Intelligence, applying my skills through impactful projects and real-world experience.
-              <br><br>Alongside my studies, I work on freelance web development projects, focusing on delivering creative and effective solutions.
-              <br><br>Open for Summer 2025 opportunities in Software Development, AI or Cyber where I can leverage my skills and grow professionally.
-            </p>
 
-            <!-- Languages -->
-            <div class="skills-container">
-              <p class="skills-title">🖥️ Languages:</p>
-              <div class="skill">
-                <img src="./assets/java-icon.png" alt="Java Icon" class="skill-icon">
-              </div>
-              <div class="skill">
-                <img src="./assets/javascript.svg" alt="JavaScript Icon" class="skill-icon">
-              </div>
-              <div class="skill">
-                <img src="./assets/python-icon.webp" alt="Python Icon" class="skill-icon">
-              </div>
-              <div class="skill">
-                <img src="./assets/c-icon.webp" alt="C Icon" class="skill-icon">
-              </div>
-                <div class="skill">
-                <img src="./assets/html-icon.png" alt="HTML Icon" class="skill-icon">
-              </div>
-              <div class="skill">
-                <img src="./assets/css-icon.png" alt="CSS Icon" class="skill-icon">
-              </div>
-              <div class="skill">
-                <img src="./assets/mysql-logo.png" alt="MySQL Icon" class="skill-icon">
-              </div>
-              <div class="skill">
-                <img src="./assets/postgrelogo.png" alt="PostgreSQL Icon" class="skill-icon">
-              </div>
+        <!-- Tech Stack -->
+        <div class="skills-container">
+          <!-- Languages & Frameworks -->
+          <h3>Languages & Frameworks</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/java-icon.png" alt="Java">
+              <span>Java</span>
             </div>
-
-            <!-- Tools & Frameworks -->
-            <div class="skills-container">
-              <p class="skills-title">⚙️ Developer Tools & Frameworks:</p>
-              <div class="skill">
-                <img src="./assets/springboot-logo.png" alt="Spring Boot Icon" class="skill-icon">
-              </div>
-              <div class="skill">
-                <img src="./assets/postman-logo.png" alt="Postman API Icon" class="skill-icon">
-              </div>
-              <div class="skill">
-                <img src="./assets/github-icon-2.svg" alt="Python Icon" class="skill-icon">
-              </div>
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/python-icon.webp" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/javascript.svg" alt="JavaScript">
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/c-icon.webp" alt="C">
+              <span>C</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/html-icon.png" alt="HTML5">
+              <span>HTML5</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/css-icon.webp" alt="CSS">
+              <span>CSS3</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/streamlit-icon.png" alt="Streamlit">
+              <span>Streamlit</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/langchain-icon.png" alt="LangChain">
+              <span>LangChain</span>
+            </div>
+          </div>
+          
+          <!-- Dev Tools -->
+          <h3>Developer Tools</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/git-icon.png" alt="Git">
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/linux-icon.png" alt="Linux">
+              <span>Linux</span>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/tech-stack-icons/postman-logo.png" alt="Postman API">
+              <span>Postman API</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- WORK/EDUCATION -->
     <section id="experience">
-      <div class="experience-container">
-        <div class="section-header">
-          <img src="./assets/experience.png" alt="Experience Icon" class="decorative-icon">
-          <h2>Experience</h2>
+      <div class="container">
+        <div class="tabs">
+          <button class="tab active" onclick="showTab('work')">Work</button>
+          <button class="tab" onclick="showTab('education')">Education</button>
         </div>
-        <div class="experience-timeline">
-          <!-- cyens -->
-          <div class="experience-item">
-            <div class="experience-content">
-              <div class="experience-header">
-                <div class="company-logo">
-                  <img src="./assets/cyens-logo.jpg" alt="CYENS Centre Of Excellence Logo">
-                </div>
-                <div class="experience-title">
-                  <h3>Software Engineering Intern (Upcoming)</h3>
-                  <h4>CYENS Centre of Excellence</h4>
-                  <p class="duration">Starting June 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- mt webworks -->
-          <div class="experience-item">
-            <div class="experience-content">
-              <div class="experience-header">
-                <div class="company-logo">
-                  <img src="./assets/mtwebworks-logo.png" alt="UCY Logo">
-                </div>
-                <div class="experience-title">
-                  <h3>Co-Founder & Web Developer</h3>
-                  <h4>MT Webworks
-                    <a href="https://mt-webworks.com" target="_blank" class="company-link">
-                      <img src="./assets/external-link.png" alt="External Link" class="external-link-icon">
-                      Visit Website
-                    </a>
-                  </h4>
-                  <p class="duration">June 2024 - Present</p>
-                </div>
-              </div>
-              <div class="experience-details">
-                <ul>
-                  <li>Co-founded MT Webworks, delivering and maintaining <strong>5+ custom websites</strong> tailored to clients' needs and preferences.</li>
-                  <li>Increased client website traffic by <strong>45% in 30 days</strong>, driving <strong>1,107 site sessions</strong> and securing <strong>805 unique visitors</strong>.</li>
-                  <li>Enhanced client <strong>engagement metrics by 67%</strong>, achieving 35 clicks to contact within a month.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- gaddr -->
-          <div class="experience-item">
-            <div class="experience-content">
-              <div class="experience-header">
-                <div class="company-logo">
-                  <img src="./assets/gaddr-logo.png" alt="UCY Logo">
-                </div>
-                <div class="experience-title">
-                  <h3>Full Stack Developer Intern</h3>
-                  <h4>Gaddr</h4>
-                  <p class="duration">January 2025 - February 2025</p>
-                </div>
-              </div>
-              <div class="experience-details">
-                <ul>
-                  <li>Replaced AWS-based authentication functions with custom JavaScript implementations.</li>
-                  <li>Built and tested RESTful API endpoints using SwaggerUI, Postman and pgAdmin4.</li>
-                  <li>Collaborated on new features, bug fixes, and developing the 'Explore' page using GitHub for version control and code reviews.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- EDUCATION -->
-    <section id="education">
-      <div class="education-container">
-        <div class="section-header">
-          <img src="./assets/education-icon.png" alt="Education Icon, Icon made by Pixel perfect from www.flaticon.com" class="decorative-icon">
-          <h2>Education</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>University of Cyprus</h3>
-              <h4>B.Sc. Degree | September 2023 - Present</h4>
-              <ul>
-                <li>Computer Science, 2nd Year</li>
-                <li>Completed courses include Data Structures and Algorithms, Object-Oriented Programming, C Programming, Computer Organization and Assembly Programming, Discrete Mathematics, Calculus I & II, Linear Algebra, and Probability and Statistics.</li>
-              </ul>
+        <div id="work" class="tab-content active">
+          <div class="timeline-wrapper">
+            <div class="timeline-item">
+              <div class="logo"><img src="./assets/company-icons/cyens-logo.jpg" alt="CYENS CoE Logo" /></div>
+              <div class="content">
+                <h3>CYENS Centre of Excellence <span class="date">Jun 2025 - Present</span></h3>
+                <p class="role">Software Engineering Intern</p>
+                <ul>
+                  <li>Joining the CAIR Team to help develop a platform that uses LLMs, text-to-image, and text-to-speech technologies.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="logo"><img src="/assets/company-icons/mtwebworks-logo.png" alt="MT Webworks Logo" /></div>
+              <div class="content">
+                <h3>MT Webworks <span class="date">Jun 2024 - Present</span></h3>
+                <p class="role">Co-Founder & Web Developer</p>
+                <ul>
+                  <li>Co-founded MT Webworks, delivering and maintaining 5+ custom websites tailored to clients’ needs and preferences.</li>
+                  <li>Increased client website traffic by 45% in 30 days, driving 1,107 site sessions and securing 805 unique visitors.</li>
+                  <li>Enhanced client engagement metrics by 67%, achieving 35 clicks to contact within a month.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="logo"><img src="/assets/company-icons/gaddr-logo-2.png" alt="Gaddr Logo" /></div>
+              <div class="content">
+                <h3>Gaddr <span class="date">Jan 2025 - Feb 2025</span></h3>
+                <p class="role">Full Stack Developer Intern</p>
+                <ul>
+                  <li>Worked on replacing AWS-based authentication with a custom JavaScript solution, reducing operational costs.</li>
+                  <li>Developed and tested RESTful APIs using SwaggerUI and Postman.</li>
+                  <li>Collaborated with other developers on new features and bug fixes using GitHub for version control and code reviews.</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Wargaming Backend SWE Course</h3>
-              <h4>Professional Development Course | March 2025 - May 2025
-                  <a href="https://drive.google.com/file/d/1Lbfo_j_kYpKlsFnH2SAmV_5uXg9EY78_/view?usp=sharing" target="_blank" class="company-link">
-                      View certificate
-                  </a>
-              </h4>
-              <ul>
-                <li>Currently participating in Wargaming's Back-End Software Engineering Course set to complete end of May 2025.</li>
-                <li>Covered topics include: Operating Systems, Linux Terminal, Networking & Security, Python.</li>
-                <li>Gaining hands on experience through assigned tasks and projects.</li>
-              </ul>
+        </div>
+
+        <div id="education" class="tab-content">
+          <div class="timeline-wrapper">
+            <div class="timeline-item">
+              <div class="logo"><img src="/assets/company-icons/UCY-logo-2.png" alt="UCY Logo" /></div>
+              <div class="content">
+                <h3>University of Cyprus <span class="date">Expected Graduation: Jun 2027</span></h3>
+                <p class="role">BSc Computer Science</p>
+                <ul>
+                  <li>Strong academic foundation in Java and C programming, OOP Principles, Data Structures and algorithmic problem solving.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="logo"><img src="/assets/company-icons/wargaming-logo.png" alt="Wargaming Logo" /></div>
+              <div class="content">
+                <h3>Wargaming <span class="date">Mar 2025 - May 2025</span></h3>
+                <p class="role">Back-End Software Engineering Course</p>
+                <ul>
+                  <li>Completed Wargaming's competitive Back-End SWE course covering OS, Networking, Linux tools, SQL/ORMs, FastAPI, CI/CD, DevOps, and Kubernetes.</li>
+                  <li>Delivered hands-on projects and challenges using FastAPI, SQLAlchemy, Linux CLI, and GitLab CI, including building an HTTP server and a round-robin message broker.</li>
+                </ul>
+                <button class="certificate-btn" onclick="window.open('https://drive.google.com/file/d/1Lbfo_j_kYpKlsFnH2SAmV_5uXg9EY78_/view?usp=sharing', '_blank')">
+                  View Certificate <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -260,21 +233,21 @@
     <!-- PROJECTS -->
     <section id="projects">
       <div class="section-header">
-        <img src="./assets/projects-icon.png" alt="Project Icon, Icon made by Pixel perfect from www.flaticon.com" class="decorative-icon">
+        <img src="./assets/section-icons/projects-icon.png" alt="Project Icon, Icon made by Pixel perfect from www.flaticon.com" class="decorative-icon">
         <h2>Projects</h2>
       </div>
       <div class="projects-grid">
-        <!-- Digital Wardrobe -->
-        <div class="project-card" onclick="openProjectDetails('digitalWardrobe')">
+        <!-- stud(ai) -->
+        <div class="project-card" onclick="openProjectDetails('studai')">
           <div class="project-card-image">
-            <img src="./assets/projects-preview/digitalwardrobe.jpg" alt="Digital Wardrobe Project">
+            <img src="./assets/projects-preview/studai.png" alt="AI Study Mate - studai">
             <div class="project-overlay">
               <i class="fas fa-eye"></i>
               <span>View Project</span>
             </div>
           </div>
           <div class="project-card-content">
-            <h3>Digital Wardrobe</h3>
+            <h3>AI Study Mate - stud(ai)</h3>
             <p>🔨 Under development...</p>
           </div>
         </div>
@@ -289,7 +262,7 @@
             </div>
           </div>
           <div class="project-card-content">
-            <h3>Wargaming Course - Task Notifiter Bot</h3>
+            <h3>Wargaming Task Notifier Bot</h3>
             <p>April 2025</p>
           </div>
         </div>
@@ -367,7 +340,7 @@
     <!-- CONTACT -->
     <section id="contact">
       <div class="section-header">
-        <img src="./assets/contact-icon.png" alt="Contact Icon" class="decorative-icon">
+        <img src="./assets/section-icons/contact-icon.png" alt="Contact Icon" class="decorative-icon">
         <h2>Let's Connect</h2>
       </div>
       <div class="contact-container">
@@ -388,7 +361,7 @@
               <a href="mailto:panagiotistsembekis45@gmail.com">panagiotistsembekis45@gmail.com</a>
             </div>
             <div class="contact-card">
-              <img src="./assets/github.png" alt="GitHub Icon" class="contact-card-icon">
+              <img src="./assets/tech-stack-icons/github.png" alt="GitHub Icon" class="contact-card-icon">
               <h4>GitHub</h4>
               <a href="https://github.com/tsembp" target="_blank">View my work</a>
             </div>

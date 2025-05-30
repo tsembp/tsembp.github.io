@@ -28,6 +28,14 @@ function toggleMenu(){
     icon.classList.toggle("open");
 }
 
+function showTab(tabId) {
+  document.querySelectorAll(".tab").forEach(btn => btn.classList.remove("active"));
+  document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+
+  document.getElementById(tabId).classList.add("active");
+  document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add("active");
+}
+
 function showProject(projectId) {
     const projectDetails = document.querySelectorAll('.project-detail');
     const projectButtons = document.querySelectorAll('.project-btn');
@@ -88,6 +96,31 @@ function openProjectDetails(projectId) {
 
 function getProjectContent(projectId) {
   const projects = {
+    studai: `
+      <h3>🧠 stud(ai)</h3>
+      <h5>Under development...</h5>
+      <p>Currently developing Streamlit-based interactive study assistant powered by LangChain and LLMs. 
+        It helps students transform their study notes into flashcards, quizzes, and summaries — all from 
+        uploaded PDFs or DOCX files.</p>
+      <br>
+      <p>Key features include:</p>
+      <ul>
+        <li><strong>Notes upload:</strong> Upload .pdf or .docx study files.</li>
+        <li><strong>Automatic chunking and embedding of document content</strong></li>
+        <li><strong>Flashcard Generator:</strong> Log outfits as worn on specific dates or plan for future events, ensuring you never repeat an outfit unintentionally.</li>
+        <li><strong>Quiz Mode:</strong> Receive personalized outfit recommendations tailored to occasions, local dress codes, weather conditions, and more.</li>
+        <li><strong>Ask Me Anything:</strong> Utilize Firebase Storage to store images for clothing pieces.</li>
+        <li><strong>Summarize Notes: </strong></li>
+        </ul>
+      <p>
+        <a href="https://github.com/tsembp/AI-Study-Mate" target="_blank" style="color: #FFC107; text-decoration: none;">View GitHub Repository</a>
+      </p>
+      <div class="tech-stack">
+        <span class="tech-tag">Streamlit</span>
+        <span class="tech-tag">LangChain</span>
+        <span class="tech-tag">OpenAI & HugginFace Hub LLMs</span>
+      </div>
+    `,
     wgDiscordBot: `
       <h3>🤖 Wargaming Course - New Task Notifier Discord Bot</h3>
       <h5>April 2025</h5>
@@ -110,30 +143,6 @@ function getProjectContent(projectId) {
       <div class="tech-stack">
         <span class="tech-tag">Python</span>
         <span class="tech-tag">Selenium Web Scraping</span>
-      </div>
-    `,
-    digitalWardrobe: `
-      <h3>👕 Digital Wardrobe</h3>
-      <h5>Under development...</h5>
-      <p>Currently developing an innovative web application designed to revolutionize outfit 
-        planning and management. The app aims to provide a seamless and engaging experience, 
-        helping users organize their wardrobe and make confident style choices.</p>
-      <br>
-      <p>Key features include:</p>
-      <ul>
-        <li><strong>Clothing Management:</strong> Upload, categorize, and organize clothing items by type (e.g., shirts, pants, shoes) with image support.</li>
-        <li><strong>Outfit Creation:</strong> Mix and match clothing pieces to create and save complete outfits, with options to add detailed descriptions.</li>
-        <li><strong>Outfit Tracking:</strong> Log outfits as worn on specific dates or plan for future events, ensuring you never repeat an outfit unintentionally.</li>
-        <li><strong>AI-Powered Suggestions:</strong> Receive personalized outfit recommendations tailored to occasions, local dress codes, weather conditions, and more.</li>
-        <li><strong>Cloud Storage:</strong> Utilize Firebase Storage to store images for clothing pieces.</li>
-      </ul>
-      <div class="tech-stack">
-        <span class="tech-tag">Java</span>
-        <span class="tech-tag">Spring Boot</span>
-        <span class="tech-tag">JavaScript</span>
-        <span class="tech-tag">HTML</span>
-        <span class="tech-tag">CSS</span>
-        <span class="tech-tag">PostgreSQL</span>
       </div>
     `,
     jobApplicationTracker: `
