@@ -1,0 +1,33 @@
+/* animations.css */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Hero entrance animations */
+.hero-greeting { animation: fadeInUp 0.6s ease both; animation-delay: 0.1s; }
+.hero-name     { animation: fadeInUp 0.6s ease both; animation-delay: 0.2s; }
+.hero-roles    { animation: fadeInUp 0.6s ease both; animation-delay: 0.35s; }
+.hero-actions  { animation: fadeInUp 0.6s ease both; animation-delay: 0.5s; }
+.hero-socials  { animation: fadeInUp 0.6s ease both; animation-delay: 0.6s; }
+.hero-right    { animation: fadeIn 0.8s ease both;   animation-delay: 0.3s; }
