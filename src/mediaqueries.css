@@ -1,0 +1,121 @@
+/* mediaqueries.css */
+
+/* =========================================
+   TABLET — ≤1024px
+   ========================================= */
+@media screen and (max-width: 1024px) {
+  #desktop-nav { padding: 0 2rem; }
+  #profile { padding: 0 2rem; padding-top: 70px; gap: 2.5rem; }
+  .hero-photo-wrapper { width: 280px; height: 280px; }
+  section { padding-left: 2rem; padding-right: 2rem; }
+  #projects { padding-left: 2rem; padding-right: 2rem; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { gap: 2.5rem; }
+  .contact-cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* =========================================
+   HAMBURGER BREAKPOINT — ≤900px
+   ========================================= */
+@media screen and (max-width: 900px) {
+  #desktop-nav { display: none; }
+  #hamburger-nav { display: flex; }
+
+  #profile {
+    padding-top: 60px; /* hamburger nav height */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    min-height: 100vh;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-right {
+    align-self: center;
+  }
+
+  .hero-photo-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-name { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skills-grid { grid-template-columns: repeat(4, 1fr); }
+
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contact-cards { grid-template-columns: 1fr; gap: 0.75rem; }
+
+  .contact-card { flex-direction: row; align-items: center; gap: 1rem; }
+
+  footer { padding: 1.5rem 2rem; }
+}
+
+/* =========================================
+   MOBILE — ≤600px
+   ========================================= */
+@media screen and (max-width: 600px) {
+  #profile {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 2rem;
+  }
+
+  .hero-name { font-size: clamp(2rem, 9vw, 3rem); }
+
+  .hero-photo-wrapper {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+  }
+
+  .hero-actions { flex-direction: column; }
+  .btn { width: 100%; text-align: center; }
+
+  section { padding: 4rem 1.25rem; }
+  #projects { padding: 4rem 1.25rem; }
+
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .projects-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+
+  .project-card-image { height: 140px; }
+  .project-card-content { padding: 0.9rem 1rem; }
+  .project-card-content h3 { font-size: 0.85rem; }
+
+  .modal-content { margin: 20px; padding: 1.75rem; }
+  .modal-content h3 { font-size: 1.2rem; }
+
+  .tab-switcher { width: 100%; }
+  .tab { flex: 1; }
+
+  .timeline {
+    --timeline-indent: 1.25rem;
+    padding-left: var(--timeline-indent);
+  }
+  .timeline-header { flex-wrap: wrap; gap: 0.5rem; }
+  .timeline-date { width: 100%; margin-top: 0.25rem; }
+
+  .top-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE — ≤400px
+   ========================================= */
+@media screen and (max-width: 400px) {
+  .hero-name { font-size: 1.9rem; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
+  .section-title { font-size: 1.8rem; }
+}
