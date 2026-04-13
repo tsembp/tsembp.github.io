@@ -1,3 +1,5 @@
+import { assetUrl } from '../utils/asset'
+
 const Profile = () => {
   return (
     <section id="profile">
@@ -13,7 +15,7 @@ const Profile = () => {
         <div className="hero-actions">
           <button
             className="btn btn-primary"
-            onClick={() => window.open('/assets/Panagiotis_Tsembekis_CV_2025.pdf')}
+            onClick={() => window.open(assetUrl('assets/Panagiotis_Tsembekis_CV_2025.pdf'))}
           >
             Download CV
           </button>
@@ -32,7 +34,7 @@ const Profile = () => {
             rel="noreferrer"
             aria-label="LinkedIn"
           >
-            <img src="/assets/linkedin.png" alt="LinkedIn" />
+            <img src={assetUrl('assets/linkedin.png')} alt="LinkedIn" />
           </a>
           <a
             className="social-link"
@@ -41,14 +43,14 @@ const Profile = () => {
             rel="noreferrer"
             aria-label="GitHub"
           >
-            <img src="/assets/tech-stack-icons/github.png" alt="GitHub" />
+            <img src={assetUrl('assets/tech-stack-icons/github.png')} alt="GitHub" />
           </a>
         </div>
       </div>
 
       <div className="hero-right">
         <div className="hero-photo-wrapper">
-          <img src="/assets/profile-pic.JPEG" alt="Panagiotis Tsembekis" />
+          <img src={assetUrl('assets/profile-pic.JPEG')} alt="Panagiotis Tsembekis" />
         </div>
       </div>
     </section>

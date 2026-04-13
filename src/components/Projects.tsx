@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { assetUrl } from '../utils/asset'
 
 type ProjectId = 'studai' | 'wgDiscordBot' | 'jobApplicationTracker' | 'osrh' | 'studentGradingSystem' | 'others';
 
@@ -18,7 +19,7 @@ const projectsData: Record<ProjectId, ProjectData> = {
     date: 'May 2025',
     description: 'A Streamlit-based interactive study assistant powered by LangChain and LLMs. Transforms study notes into flashcards, quizzes, and summaries from uploaded PDFs or DOCX files.',
     gallery: [
-      '/assets/projects/gallery/studai/1.png',
+      assetUrl('assets/projects/gallery/studai/1.png'),
     ],
     bullets: [
       { label: 'Notes upload', text: 'Upload .pdf or .docx study files.' },
@@ -68,9 +69,9 @@ const projectsData: Record<ProjectId, ProjectData> = {
     date: 'October - November 2025',
     description: 'As part of the EPL342 Databases course at the University of Cyprus, I co-designed and implemented a full relational database system and operational web app for a next-generation ride-hailing platform. My work covered schema design, T-SQL stored procedures and triggers, backend API integration, and a custom React frontend. Final grade: 9.5/10.',
     gallery: [
-      '/assets/projects/gallery/osrh/1.png',
-      '/assets/projects/gallery/osrh/2.png',
-      '/assets/projects/gallery/osrh/3.png',
+      assetUrl('assets/projects/gallery/osrh/1.png'),
+      assetUrl('assets/projects/gallery/osrh/2.png'),
+      assetUrl('assets/projects/gallery/osrh/3.png'),
     ],
     bullets: [
       { label: 'Advanced route-calculation sproc', text: 'Implemented a high-performance T-SQL stored procedure that computes all bridged routes between two geofenced zones, generating ~2200 alternative paths (up to 24 legs depth) in ~400 ms.' },
@@ -121,12 +122,12 @@ const projectsData: Record<ProjectId, ProjectData> = {
 };
 
 const projectCards = [
-  { id: 'osrh' as ProjectId, image: '/assets/projects/previews/osrh.png', title: 'One-Stop Ride-Hail (OSRH)', subtitle: 'October - November 2025' },
-  { id: 'studai' as ProjectId, image: '/assets/projects/previews/studai.png', title: 'AI Study Mate — stud(ai)', subtitle: 'May 2025' },
-  { id: 'wgDiscordBot' as ProjectId, image: '/assets/projects/previews/wgdiscordbot.png', title: 'WG Task Notifier Bot', subtitle: 'April 2025' },
-  { id: 'jobApplicationTracker' as ProjectId, image: '/assets/projects/previews/jobapplicationtracker.png', title: 'Job Application Tracker', subtitle: 'January 2025' },
-  { id: 'studentGradingSystem' as ProjectId, image: '/assets/projects/previews/studentgradingsystem.png', title: 'Student Grading System', subtitle: 'Dec 2024 – Jan 2025' },
-  { id: 'others' as ProjectId, image: '/assets/projects/previews/newsfeed.png', title: 'Other Projects', subtitle: 'various' },
+  { id: 'osrh' as ProjectId, image: assetUrl('assets/projects/previews/osrh.png'), title: 'One-Stop Ride-Hail (OSRH)', subtitle: 'October - November 2025' },
+  { id: 'studai' as ProjectId, image: assetUrl('assets/projects/previews/studai.png'), title: 'AI Study Mate — stud(ai)', subtitle: 'May 2025' },
+  { id: 'wgDiscordBot' as ProjectId, image: assetUrl('assets/projects/previews/wgdiscordbot.png'), title: 'WG Task Notifier Bot', subtitle: 'April 2025' },
+  { id: 'jobApplicationTracker' as ProjectId, image: assetUrl('assets/projects/previews/jobapplicationtracker.png'), title: 'Job Application Tracker', subtitle: 'January 2025' },
+  { id: 'studentGradingSystem' as ProjectId, image: assetUrl('assets/projects/previews/studentgradingsystem.png'), title: 'Student Grading System', subtitle: 'Dec 2024 – Jan 2025' },
+  { id: 'others' as ProjectId, image: assetUrl('assets/projects/previews/newsfeed.png'), title: 'Other Projects', subtitle: 'various' },
 ];
 
 const Projects = () => {

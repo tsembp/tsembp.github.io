@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { assetUrl } from '../utils/asset'
 
 interface TimelineItem {
   logo: string;
@@ -12,7 +13,7 @@ interface TimelineItem {
 
 const workItems: TimelineItem[] = [
   {
-    logo: '/assets/company-icons/talos_trading_logo.jpeg',
+    logo: assetUrl('assets/company-icons/talos_trading_logo.jpeg'),
     alt: 'Talos Trading',
     company: 'Talos Trading',
     date: 'Starting Jun 2026',
@@ -22,7 +23,7 @@ const workItems: TimelineItem[] = [
     ],
   },
   {
-    logo: '/assets/company-icons/wargaming-logo.png',
+    logo: assetUrl('assets/company-icons/wargaming-logo.png'),
     alt: 'Wargaming',
     company: 'Wargaming',
     date: 'Jul 2025 – Jan 2026',
@@ -34,7 +35,7 @@ const workItems: TimelineItem[] = [
     ],
   },
   {
-    logo: '/assets/company-icons/cyens-logo.jpg',
+    logo: assetUrl('assets/company-icons/cyens-logo.jpg'),
     alt: 'CYENS CoE',
     company: 'CYENS Centre of Excellence',
     date: 'Jun 2025 – Jul 2025',
@@ -47,7 +48,7 @@ const workItems: TimelineItem[] = [
     ],
   },
   {
-    logo: '/assets/company-icons/mtwebworks-logo.png',
+    logo: assetUrl('assets/company-icons/mtwebworks-logo.png'),
     alt: 'MT Webworks',
     company: 'MT Webworks',
     date: 'Jun 2024 – Present',
@@ -62,7 +63,7 @@ const workItems: TimelineItem[] = [
 
 const openSourceItems: TimelineItem[] = [
   {
-    logo: '/assets/company-icons/meta.webp',
+    logo: assetUrl('assets/company-icons/meta.webp'),
     alt: 'Meta / pyrefly',
     company: 'Meta (facebook/pyrefly)',
     date: 'Jan 2026 – Present',
@@ -75,7 +76,7 @@ const openSourceItems: TimelineItem[] = [
     ],
   },
   {
-    logo: '/assets/company-icons/pydantic.jpeg',
+    logo: assetUrl('assets/company-icons/pydantic.jpeg'),
     alt: 'Pydantic',
     company: 'Pydantic',
     date: 'Jan 2026 – Present',
@@ -91,7 +92,7 @@ const openSourceItems: TimelineItem[] = [
 
 const educationItems: TimelineItem[] = [
   {
-    logo: '/assets/company-icons/UCY-logo-2.png',
+    logo: assetUrl('assets/company-icons/UCY-logo-2.png'),
     alt: 'University of Cyprus',
     company: 'University of Cyprus',
     date: 'Expected Jun 2027',
@@ -101,7 +102,7 @@ const educationItems: TimelineItem[] = [
     ],
   },
   {
-    logo: '/assets/company-icons/wargaming-logo.png',
+    logo: assetUrl('assets/company-icons/wargaming-logo.png'),
     alt: 'Wargaming',
     company: 'Wargaming',
     date: 'Mar 2025 – May 2025',

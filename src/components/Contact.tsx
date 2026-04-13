@@ -1,6 +1,8 @@
+import { assetUrl } from '../utils/asset'
+
 const contactCards = [
   {
-    icon: '/assets/linkedin.png',
+    icon: assetUrl('assets/linkedin.png'),
     alt: 'LinkedIn',
     label: 'linkedin',
     href: 'https://www.linkedin.com/in/panagiotis-tsembekis/',
@@ -8,7 +10,7 @@ const contactCards = [
     external: true,
   },
   {
-    icon: '/assets/email.png',
+    icon: assetUrl('assets/email.png'),
     alt: 'Email',
     label: 'email',
     href: 'mailto:panagiotistsembekis45@gmail.com',
@@ -16,7 +18,7 @@ const contactCards = [
     external: false,
   },
   {
-    icon: '/assets/tech-stack-icons/github.png',
+    icon: assetUrl('assets/tech-stack-icons/github.png'),
     alt: 'GitHub',
     label: 'github',
     href: 'https://github.com/tsembp',
