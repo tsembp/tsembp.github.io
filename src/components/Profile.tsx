@@ -15,7 +15,7 @@ const Profile = () => {
         <div className="hero-actions">
           <button
             className="btn btn-primary"
-            onClick={() => window.open(assetUrl('assets/Panagiotis_Tsembekis_CV_2025.pdf'))}
+            onClick={() => window.open(assetUrl('assets/Panagiotis_Tsembekis_CV_2026.pdf'))}
           >
             Download CV
           </button>

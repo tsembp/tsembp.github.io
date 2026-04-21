@@ -86,9 +86,34 @@ const About = () => {
         <div className="about-bio">
           <h3>// background</h3>
           <ul className="about-list">
-            <li>Ambitious and driven 3rd Year CS student with a strong interest in Software Engineering, Trading and AI.</li>
+            <li>3rd Year CS student with a strong interest in Software Engineering, Trading and AI.</li>
             <li>Incoming SWE Intern at Talos Trading for Summer 2026.</li>
-            <li>Alongside my studies, I co-founded MT Webworks — delivering creative and effective web solutions for clients.</li>
+            <li>
+              Won 3rd place at the Bank of Cyprus Hackathon 6.0 with my team TestoBugs for building an energy trading solution that lets photovoltaic owners sell surplus electricity at competitive rates.
+              {' '}
+              <span className="achievement-sources" aria-label="Hackathon sources">
+                <a
+                  className="source-icon-btn"
+                  href="https://medium.com/the-crowdpolicy-collection-en/boc-fintech-hackathon-6-0-empowering-innovation-in-the-new-era-of-fintech-7d398987713a"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Read article on Medium"
+                  title="Read article on Medium"
+                >
+                  <i className="fas fa-newspaper" aria-hidden="true"></i>
+                </a>
+                <a
+                  className="source-icon-btn"
+                  href="https://cyprus-mail.com/2025/10/22/boc-hackathon-attracts-over-100-participants-in-31-teams"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Read article on Cyprus Mail"
+                  title="Read article on Cyprus Mail"
+                >
+                  <i className="fas fa-newspaper" aria-hidden="true"></i>
+                </a>
+              </span>
+            </li>
           </ul>
         </div>
 

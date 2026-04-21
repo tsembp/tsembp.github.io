@@ -102,6 +102,16 @@ const educationItems: TimelineItem[] = [
     ],
   },
   {
+    logo: assetUrl('assets/company-icons/uah-logo.png'),
+    alt: 'Universidad de Alcala de Henares',
+    company: 'Universidad de Alcala de Henares',
+    date: 'Jan 2026 – May 2026',
+    role: 'Exchange Program (Erasmus+), Computer Science',
+    bullets: [
+      'Currently enrolled in Security, Automated Planning, Software Quality, Testing & Maintenance, Embedded Systems and Project Management.',
+    ],
+  },
+  {
     logo: assetUrl('assets/company-icons/wargaming-logo.png'),
     alt: 'Wargaming',
     company: 'Wargaming',
@@ -152,13 +162,15 @@ const Timeline = ({ items }: { items: TimelineItem[] }) => (
 
 const Experience = () => {
   const [active, setActive] = useState<'work' | 'open-source' | 'education'>('work');
+  const activeItems = active === 'work' ? workItems : active === 'open-source' ? openSourceItems : educationItems;
 
   return (
     <section id="experience">
       <p className="section-label">experience</p>
       <h2 className="section-title">Where I've Been</h2>
 
-      <div className="tab-switcher">
+      <div className={`tab-switcher active-${active}`}>
+        <span className="tab-indicator" aria-hidden="true"></span>
         <button
           className={`tab ${active === 'work' ? 'active' : ''}`}
           onClick={() => setActive('work')}
@@ -179,14 +191,8 @@ const Experience = () => {
         </button>
       </div>
 
-      <div className={`tab-content ${active === 'work' ? 'active' : ''}`}>
-        <Timeline items={workItems} />
-      </div>
-      <div className={`tab-content ${active === 'open-source' ? 'active' : ''}`}>
-        <Timeline items={openSourceItems} />
-      </div>
-      <div className={`tab-content ${active === 'education' ? 'active' : ''}`}>
-        <Timeline items={educationItems} />
+      <div className="tab-content active" key={active}>
+        <Timeline items={activeItems} />
       </div>
     </section>
   );
