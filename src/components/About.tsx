@@ -15,12 +15,14 @@ import {
   FaLinux,
   FaPython,
   FaServer,
+  FaSyncAlt
 } from 'react-icons/fa';
+import { SiGo } from 'react-icons/si';
 
 const skillGroups = [
   {
     label: 'languages',
-    items: ['Python', 'Java', 'SQL', 'C++'],
+    items: ['Go', 'Python', 'Java', 'SQL', 'C++'],
   },
   {
     label: 'frameworks',
@@ -32,12 +34,13 @@ const skillGroups = [
   },
   {
     label: 'tools',
-    items: ['Linux', 'Git', 'Docker', 'Kubernetes', 'Grafana', 'Jira'],
+    items: ['Linux', 'Git', 'Docker', 'Kubernetes', 'CI/CD Pipelines', 'Grafana', 'Jira'],
   },
 ];
 
 const skillIcons: Record<string, IconType> = {
   Python: FaPython,
+  Go: SiGo,
   Java: FaJava,
   SQL: FaDatabase,
   'C++': FaCode,
@@ -54,6 +57,7 @@ const skillIcons: Record<string, IconType> = {
   Kubernetes: FaCube,
   Grafana: FaChartLine,
   Jira: FaJira,
+  'CI/CD Pipelines': FaSyncAlt,
 };
 
 const skillIconColors: Record<string, string> = {
@@ -86,8 +90,9 @@ const About = () => {
         <div className="about-bio">
           <h3>// background</h3>
           <ul className="about-list">
-            <li>3rd Year CS student with a strong interest in Software Engineering, Trading and AI.</li>
-            <li>Incoming SWE Intern at Talos Trading for Summer 2026.</li>
+            <li>Final-Year Computer Science student with a strong interest in Software Engineering, Trading and AI.</li>
+            <li>Currently Software Engineer Intern at Talos Trading for Summer 2026.</li>
+            <li>  Contributed to open-source projects including Pydantic and Meta&apos;s Pyrefly.</li>
             <li>
               Won 3rd place at the Bank of Cyprus Hackathon 6.0 with my team TestoBugs for building an energy trading solution that lets photovoltaic owners sell surplus electricity at competitive rates.
               {' '}

@@ -16,10 +16,10 @@ const workItems: TimelineItem[] = [
     logo: assetUrl('assets/company-icons/talos_trading_logo.jpeg'),
     alt: 'Talos Trading',
     company: 'Talos Trading',
-    date: 'Starting Jun 2026',
+    date: 'Jun 2026 -- Present',
     role: 'Software Engineer Intern (Connectivity Team)',
     bullets: [
-      'Joining Talos Trading in June 2026 as a Software Engineer Intern on the Connectivity Team, working on trading infrastructure and connectivity systems.',
+      'Joined Talos Trading in June 2026 as a Software Engineer Intern on the Connectivity Team, working on trading infrastructure and connectivity systems.',
     ],
   },
   {
