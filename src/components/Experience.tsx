@@ -19,7 +19,7 @@ const workItems: TimelineItem[] = [
     date: 'Jun 2026 -- Present',
     role: 'Software Engineer Intern (Connectivity Team)',
     bullets: [
-      'Joined Talos Trading in June 2026 as a Software Engineer Intern on the Connectivity Team, working on trading infrastructure and connectivity systems.',
+      'Developing a reusable Go-based certification framework for production trading gateways, automating validation of market data, order flow, and gateway functionality to improve system reliability.',
     ],
   },
   {

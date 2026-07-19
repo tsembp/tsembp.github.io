@@ -11,6 +11,7 @@ const Profile = () => {
         <ul className="hero-roles">
           <li className="hero-role">SWE Intern @ Talos</li>
           <li className="hero-role">Final-Year CS Student @ UCY</li>
+          <li className="hero-role">Based in Nicosia, Cyprus</li>
         </ul>
         <div className="hero-actions">
           <button
@@ -50,7 +51,7 @@ const Profile = () => {
 
       <div className="hero-right">
         <div className="hero-photo-wrapper">
-          <img src={assetUrl('assets/profile-pic.JPEG')} alt="Panagiotis Tsembekis" />
+          <img src={assetUrl('assets/profile-pic.png')} alt="Panagiotis Tsembekis" />
         </div>
       </div>
     </section>
