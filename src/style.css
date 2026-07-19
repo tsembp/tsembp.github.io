@@ -1170,6 +1170,16 @@ section {
   letter-spacing: 0.05em;
 }
 
+.project-detail-heading {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  letter-spacing: 0.08em;
+  margin: 1.5rem 0 0.75rem;
+  text-transform: uppercase;
+}
+
 .modal-content p {
   font-family: var(--font-mono);
   font-size: 0.92rem;

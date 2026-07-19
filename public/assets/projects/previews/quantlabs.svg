@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title description">
+  <title id="title">Order book dashboard</title>
+  <desc id="description">A stylized dark market dashboard with an order book and price chart</desc>
+  <rect width="1200" height="680" fill="#101a24"/>
+  <rect x="1" y="1" width="1198" height="678" fill="none" stroke="#263847" stroke-width="2"/>
+
+  <g stroke="#21303d" stroke-width="1">
+    <path d="M84 190H1116M84 260H1116M84 330H1116M84 400H1116M84 470H1116M84 540H1116"/>
+    <path d="M236 158V582M388 158V582M540 158V582M692 158V582M844 158V582M996 158V582"/>
+  </g>
+
+  <text x="85" y="112" fill="#8fa0af" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="3">MARKET MICROSTRUCTURE RESEARCH</text>
+  <rect x="950" y="82" width="166" height="42" rx="21" fill="#123e36" stroke="#1a8169"/>
+  <circle cx="978" cy="103" r="7" fill="#31d8a4"/>
+  <text x="995" y="110" fill="#bdf5e1" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">LIVE ENGINE</text>
+
+  <g fill="#a8b6c2" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="1">
+    <text x="84" y="177">PRICE / TIME</text>
+    <text x="870" y="177">ORDER BOOK</text>
+  </g>
+
+  <path d="M92 506L168 474L244 492L318 412L392 435L469 350L544 382L621 276L694 318L770 228L846 258" fill="none" stroke="#35dba6" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+  <path d="M92 506L168 474L244 492L318 412L392 435L469 350L544 382L621 276L694 318L770 228L846 258L846 560H92Z" fill="#123c39" opacity=".58"/>
+  <path d="M92 506L168 474L244 492L318 412L392 435L469 350L544 382L621 276L694 318L770 228L846 258" fill="none" stroke="#35dba6" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+  <g fill="#35dba6">
+    <circle cx="318" cy="412" r="7"/><circle cx="621" cy="276" r="7"/><circle cx="770" cy="228" r="7"/>
+  </g>
+  <path d="M92 527H846" stroke="#548092" stroke-dasharray="8 9" stroke-width="2"/>
+  <text x="92" y="568" fill="#8fa0af" font-family="Arial, Helvetica, sans-serif" font-size="16">SIMULATED EXECUTION FLOW</text>
+
+  <rect x="880" y="205" width="236" height="40" rx="6" fill="#16242e"/>
+  <text x="900" y="231" fill="#9aacb9" font-family="Arial, Helvetica, sans-serif" font-size="15">ASKS</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="17">
+    <text x="890" y="281" fill="#f7b5b7">101.24</text><rect x="984" y="266" width="108" height="20" rx="4" fill="#7d3946"/>
+    <text x="890" y="321" fill="#f7b5b7">101.18</text><rect x="984" y="306" width="75" height="20" rx="4" fill="#7d3946"/>
+    <text x="890" y="361" fill="#f7b5b7">101.12</text><rect x="984" y="346" width="130" height="20" rx="4" fill="#7d3946"/>
+  </g>
+  <path d="M880 391H1116" stroke="#3d5260" stroke-width="2"/>
+  <text x="890" y="419" fill="#a8b6c2" font-family="Arial, Helvetica, sans-serif" font-size="15">SPREAD 0.06</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="17">
+    <text x="890" y="462" fill="#78e6bd">101.06</text><rect x="984" y="447" width="114" height="20" rx="4" fill="#256f5d"/>
+    <text x="890" y="502" fill="#78e6bd">101.00</text><rect x="984" y="487" width="86" height="20" rx="4" fill="#256f5d"/>
+    <text x="890" y="542" fill="#78e6bd">100.94</text><rect x="984" y="527" width="144" height="20" rx="4" fill="#256f5d"/>
+  </g>
+  <rect x="880" y="563" width="236" height="40" rx="6" fill="#16242e"/>
+  <text x="900" y="589" fill="#9aacb9" font-family="Arial, Helvetica, sans-serif" font-size="15">BIDS</text>
+</svg>

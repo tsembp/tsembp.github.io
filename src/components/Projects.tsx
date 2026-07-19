@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { assetUrl } from '../utils/asset'
 
-type ProjectId = 'studai' | 'wgDiscordBot' | 'jobApplicationTracker' | 'osrh' | 'studentGradingSystem' | 'others';
+type ProjectId = 'studai' | 'wgDiscordBot' | 'jobApplicationTracker' | 'osrh' | 'quantLabs' | 'others';
 
 interface ProjectData {
   title: string;
@@ -9,6 +9,8 @@ interface ProjectData {
   description: string;
   gallery?: string[];
   bullets: { label: string; text: string }[];
+  completed?: { label: string; text: string }[];
+  inProgress?: { label: string; text: string }[];
   links: { label: string; url: string }[];
   tags: string[];
 }
@@ -85,23 +87,24 @@ const projectsData: Record<ProjectId, ProjectData> = {
     links: [{ label: 'github', url: 'https://github.com/tsembp/one-stop-ride-hail' }],
     tags: ['SQL Server', 'T-SQL', 'Flask', 'Python', 'React', 'TypeScript', 'Databases'],
   },
-  studentGradingSystem: {
-    title: '🧑‍🎓 Student Grading System',
-    date: 'Dec 2024 – Jan 2025',
-    description: 'A comprehensive application to streamline the management of student, teacher, and course records with role-based access.',
+  quantLabs: {
+    title: 'Quant Labs',
+    date: 'In progress',
+    description: 'An exchange-style market simulator for exploring quantitative trading ideas from first principles. Quant Labs models the mechanics beneath a trade: how orders rest, match, and become executions in a price-time-priority limit order book.',
     gallery: [],
-    bullets: [
-      { label: 'Role-based Auth', text: 'Secure login for Admin, Teacher, and Student.' },
-      { label: 'Admin Features', text: 'Manage records, create courses, assign teachers/students.' },
-      { label: 'Teacher Features', text: 'View and grade enrolled students.' },
-      { label: 'Student Features', text: 'View grades and course information.' },
-      { label: 'Grade Management', text: 'Input and update grades per course.' },
+    bullets: [],
+    completed: [
+      { label: 'Limit order book', text: 'Built the core Python order book with separate bid and ask sides, resting liquidity, and best-price tracking.' },
+      { label: 'Matching engine', text: 'Implemented exchange-style matching that executes crossing orders using strict price-time priority.' },
+      { label: 'Execution handling', text: 'Models full and partial fills while updating remaining order quantities and generated trades.' },
     ],
-    links: [
-      { label: 'github', url: 'https://github.com/tsembp/Student-Grading-System' },
-      { label: 'demo', url: 'https://www.youtube.com/watch?v=YKvESa6d8vU' },
+    inProgress: [
+      { label: 'Market simulation', text: 'Expanding the engine with synthetic order flow and replayable market scenarios for controlled experiments.' },
+      { label: 'Research tooling', text: 'Building analysis around book depth, spread, fills, and execution quality to evaluate trading ideas.' },
+      { label: 'Strategy experiments', text: 'Using the simulated environment to test simple execution and market-making strategies.' },
     ],
-    tags: ['Java', 'CSS', 'MySQL'],
+    links: [],
+    tags: ['Python', 'Algorithms', 'Market Microstructure', 'Quantitative Finance'],
   },
   others: {
     title: '💻 Other Projects',
@@ -122,11 +125,11 @@ const projectsData: Record<ProjectId, ProjectData> = {
 };
 
 const projectCards = [
+  { id: 'quantLabs' as ProjectId, image: assetUrl('assets/projects/previews/quantlabs.svg'), title: 'Quant Labs', subtitle: 'In progress' },
   { id: 'osrh' as ProjectId, image: assetUrl('assets/projects/previews/osrh.png'), title: 'One-Stop Ride-Hail (OSRH)', subtitle: 'October - November 2025' },
   { id: 'studai' as ProjectId, image: assetUrl('assets/projects/previews/studai.png'), title: 'AI Study Mate — stud(ai)', subtitle: 'May 2025' },
   { id: 'wgDiscordBot' as ProjectId, image: assetUrl('assets/projects/previews/wgdiscordbot.png'), title: 'WG Task Notifier Bot', subtitle: 'April 2025' },
   { id: 'jobApplicationTracker' as ProjectId, image: assetUrl('assets/projects/previews/jobapplicationtracker.png'), title: 'Job Application Tracker', subtitle: 'January 2025' },
-  { id: 'studentGradingSystem' as ProjectId, image: assetUrl('assets/projects/previews/studentgradingsystem.png'), title: 'Student Grading System', subtitle: 'Dec 2024 – Jan 2025' },
   { id: 'others' as ProjectId, image: assetUrl('assets/projects/previews/newsfeed.png'), title: 'Other Projects', subtitle: 'various' },
 ];
 
@@ -194,11 +197,33 @@ const Projects = () => {
             <h3>{project.title}</h3>
             <h5>// {project.date}</h5>
             <p>{project.description}</p>
-            <ul>
-              {project.bullets.map(({ label, text }, i) => (
-                <li key={i}><strong>{label}:</strong> {text}</li>
-              ))}
-            </ul>
+            {project.completed && project.completed.length > 0 && (
+              <>
+                <h4 className="project-detail-heading">Completed</h4>
+                <ul>
+                  {project.completed.map(({ label, text }) => (
+                    <li key={label}><strong>{label}:</strong> {text}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {project.inProgress && project.inProgress.length > 0 && (
+              <>
+                <h4 className="project-detail-heading">In Progress</h4>
+                <ul>
+                  {project.inProgress.map(({ label, text }) => (
+                    <li key={label}><strong>{label}:</strong> {text}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {project.bullets.length > 0 && (
+              <ul>
+                {project.bullets.map(({ label, text }) => (
+                  <li key={label}><strong>{label}:</strong> {text}</li>
+                ))}
+              </ul>
+            )}
             {project.gallery && project.gallery.length > 0 && (
               <div className="project-gallery">
                 <p className="project-gallery-label">gallery</p>
