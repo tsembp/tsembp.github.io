@@ -90,11 +90,12 @@ const About = () => {
         <div className="about-bio">
           <h3>// background</h3>
           <ul className="about-list">
-            <li>Final-Year Computer Science student with a strong interest in Software Engineering, Trading and AI.</li>
-            <li>Currently Software Engineer Intern at Talos Trading for Summer 2026.</li>
-            <li>  Contributed to open-source projects including Pydantic and Meta&apos;s Pyrefly.</li>
+            <li>Final-year Computer Science student interested in building reliable software and exploring fintech and trading.</li>
+            <li>Building pozare, an app for capturing and sharing the moments that make events memorable.</li>
+            <li>Seeking graduate opportunities worldwide in software engineering, fintech, or trading.</li>
+            <li>Contributed to open-source projects including Pydantic and Meta&apos;s Pyrefly.</li>
             <li>
-              Won 3rd place at the Bank of Cyprus Hackathon 6.0 with my team TestoBugs for building an energy trading solution that lets photovoltaic owners sell surplus electricity at competitive rates.
+              Won 3rd place at the Bank of Cyprus Hackathon 6.0 with my team TestoBugs.
               {' '}
               <span className="achievement-sources" aria-label="Hackathon sources">
                 <a

@@ -9,7 +9,8 @@ const Profile = () => {
           Panagiotis<br />Tsembekis<span className="accent-dot">.</span>
         </h1>
         <ul className="hero-roles">
-          <li className="hero-role">SWE Intern @ Talos</li>
+          <li className="hero-role">Building @ pozare</li>
+          <li className="hero-role">Previously @ Talos</li>
           <li className="hero-role">Final-Year CS Student @ UCY</li>
           <li className="hero-role">Based in Nicosia, Cyprus</li>
         </ul>

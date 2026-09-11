@@ -1,25 +1,40 @@
 import { useState } from 'react';
+import { FaChevronDown, FaChevronUp, FaExternalLinkAlt } from 'react-icons/fa';
 import { assetUrl } from '../utils/asset'
 
 interface TimelineItem {
   logo: string;
   alt: string;
   company: string;
+  companyUrl?: string;
   date: string;
   role: string;
   bullets: string[];
-  actions?: { label: string; url: string }[];
+  actions?: { label: string; url: string; minimal?: boolean }[];
 }
 
 const workItems: TimelineItem[] = [
   {
+    logo: assetUrl('assets/company-icons/pozare-logo.png'),
+    alt: 'pozare',
+    company: 'pozare',
+    companyUrl: 'https://pozare.app',
+    date: 'Sep 2026 – Present',
+    role: 'Software Engineer',
+    bullets: [
+      'Co-building the full-stack platform, from user-facing workflows to backend services.',
+    ],
+  },
+  {
     logo: assetUrl('assets/company-icons/talos_trading_logo.jpeg'),
     alt: 'Talos Trading',
     company: 'Talos Trading',
-    date: 'Jun 2026 -- Present',
-    role: 'Software Engineer Intern (Connectivity Team)',
+    date: 'Jun 2026 – Sep 2026',
+    role: 'Software Engineer Intern',
     bullets: [
-      'Developing a reusable Go-based certification framework for production trading gateways, automating validation of market data, order flow, and gateway functionality to improve system reliability.',
+      'Designed and implemented a reusable Go-based Gateway Certification Framework to automate conformance testing of trading gateways.',
+      'Built 7 certifications based on known gateway failure scenarios, helping identify real issues and improve reliability.',
+      'Designed and documented a full API that supports on-demand test execution, run deduplication, prioritization, cancellation, and status tracking, making gateway testing significantly more efficient and accessible.',
     ],
   },
   {
@@ -45,18 +60,6 @@ const workItems: TimelineItem[] = [
       'Refactored backend from monolithic Streamlit scripts to modular architecture, improving scalability and testability.',
       'Upgraded story engine to use LangChain chains and custom prompts for better output control.',
       'Supported deployment, testing, and debugging for research study readiness.',
-    ],
-  },
-  {
-    logo: assetUrl('assets/company-icons/mtwebworks-logo.png'),
-    alt: 'MT Webworks',
-    company: 'MT Webworks',
-    date: 'Jun 2024 – Present',
-    role: 'Co-Founder & Web Developer',
-    bullets: [
-      'Co-founded MT Webworks, delivering and maintaining 5+ custom websites tailored to client needs.',
-      'Increased client website traffic by 45% in 30 days — 1,107 sessions, 805 unique visitors.',
-      'Enhanced client engagement metrics by 67%, achieving 35 contact clicks within a month.',
     ],
   },
 ];
@@ -127,38 +130,105 @@ const educationItems: TimelineItem[] = [
   },
 ];
 
-const Timeline = ({ items }: { items: TimelineItem[] }) => (
-  <div className="timeline">
-    {items.map(({ logo, alt, company, date, role, bullets, actions }) => (
-      <div className="timeline-entry" key={company + date}>
+const Timeline = ({ items }: { items: TimelineItem[] }) => {
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+
+  const toggleItem = (key: string) => {
+    setExpandedItems((current) => {
+      const next = new Set(current);
+      if (next.has(key)) {
+        next.delete(key);
+      } else {
+        next.add(key);
+      }
+      return next;
+    });
+  };
+
+  return (
+    <div className="timeline">
+      {items.map(({ logo, alt, company, companyUrl, date, role, bullets, actions }) => {
+        const itemKey = company + date;
+        const canExpand = bullets.length > 1;
+        const isExpanded = expandedItems.has(itemKey);
+        const visibleBullets = canExpand && !isExpanded ? bullets.slice(0, 1) : bullets;
+
+        return (
+          <div className="timeline-entry" key={itemKey}>
         <div className="timeline-card">
           <div className="timeline-header">
             <div className="timeline-logo">
               <img src={logo} alt={alt} />
             </div>
             <div className="timeline-meta">
-              <h3>{company}</h3>
+              <h3>
+                {companyUrl ? (
+                  <a
+                    className="timeline-company-link"
+                    href={companyUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Visit ${company} (opens in a new tab)`}
+                  >
+                    {company} <FaExternalLinkAlt aria-hidden="true" />
+                  </a>
+                ) : company}
+              </h3>
               <p className="role">{role}</p>
             </div>
             <span className="timeline-date">{date}</span>
           </div>
           <ul className="timeline-bullets">
-            {bullets.map((b, i) => <li key={i}>{b}</li>)}
+            {visibleBullets.map((b, i) => (
+              <li key={i}>
+                {b}
+                {canExpand && !isExpanded && i === 0 && (
+                  <button
+                    type="button"
+                    className="timeline-expand-inline"
+                    aria-expanded="false"
+                    onClick={() => toggleItem(itemKey)}
+                  >
+                    ... see more <FaChevronDown aria-hidden="true" />
+                  </button>
+                )}
+              </li>
+            ))}
           </ul>
-          {actions?.map(({ label, url }) => (
+          {canExpand && isExpanded && (
             <button
-              key={label + url}
-              className="certificate-btn"
-              onClick={() => window.open(url, '_blank')}
-            >
-              {label} <i className="fas fa-arrow-right"></i>
+              type="button"
+              className="timeline-collapse-link"
+              aria-expanded="true"
+            onClick={() => toggleItem(itemKey)}
+          >
+              show less <FaChevronUp aria-hidden="true" />
             </button>
-          ))}
+          )}
+          {actions?.length && (
+            <div className="timeline-card-footer">
+              <div className="timeline-actions">
+                {actions?.map(({ label, url, minimal }) => (
+                  <a
+                    key={label + url}
+                    className={minimal ? 'timeline-link' : 'certificate-btn'}
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {label} {minimal ? <FaExternalLinkAlt aria-hidden="true" /> : <i className="fas fa-arrow-right"></i>}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
-    ))}
-  </div>
-);
+        );
+      })}
+    </div>
+  );
+};
 
 const Experience = () => {
   const [active, setActive] = useState<'work' | 'open-source' | 'education'>('work');
