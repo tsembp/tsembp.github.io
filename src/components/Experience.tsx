@@ -20,7 +20,7 @@ const workItems: TimelineItem[] = [
     company: 'pozare',
     companyUrl: 'https://pozare.app',
     date: 'Sep 2026 – Present',
-    role: 'Software Engineer',
+    role: 'Founding Engineer',
     bullets: [
       'Co-building the full-stack platform, from user-facing workflows to backend services.',
     ],
