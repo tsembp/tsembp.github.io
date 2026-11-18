@@ -1,54 +1,32 @@
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { assetUrl } from '../utils/asset'
-
-const contactCards = [
-  {
-    icon: assetUrl('assets/linkedin.png'),
-    alt: 'LinkedIn',
-    label: 'linkedin',
-    href: 'https://www.linkedin.com/in/panagiotis-tsembekis/',
-    text: 'Connect with me ↗',
-    external: true,
-  },
-  {
-    icon: assetUrl('assets/email.png'),
-    alt: 'Email',
-    label: 'email',
-    href: 'mailto:panagiotistsembekis45@gmail.com',
-    text: 'panagiotistsembekis45@gmail.com',
-    external: false,
-  },
-  {
-    icon: assetUrl('assets/tech-stack-icons/github.png'),
-    alt: 'GitHub',
-    label: 'github',
-    href: 'https://github.com/tsembp',
-    text: 'View my work ↗',
-    external: true,
-  },
-];
 
 const Contact = () => {
   return (
     <section id="contact">
-      <p className="section-label">contact</p>
-      <h2 className="section-title">Let's Connect</h2>
+      <div className="contact-layout">
+        <div className="contact-intro">
+          <p className="section-label">contact</p>
+          <h2 className="section-title">Let's connect</h2>
+          <p>
+            I'm open to graduate and internship roles in software engineering worldwide, especially in trading, fintech and payments, and happy to relocate. Interested in backend, distributed systems and infrastructure. Feel free to reach out about roles, interesting projects, or open-source collaboration.
+          </p>
+        </div>
 
-      <div className="contact-intro">
-        <p>
-          Feel free to reach out. I'm open to collaboration, interesting projects, and connecting with other developers.
-        </p>
-      </div>
-
-      <div className="contact-cards">
-        {contactCards.map(({ icon, alt, label, href, text, external }) => (
-          <div className="contact-card" key={label}>
-            <img src={icon} alt={alt} className="contact-card-icon" />
-            <h4>{label}</h4>
-            <a href={href} {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}>
-              {text}
-            </a>
-          </div>
-        ))}
+        <div className="contact-links">
+          <a className="contact-link" href="mailto:panagiotistsembekis45@gmail.com">
+            <FaEnvelope aria-hidden="true" /> panagiotistsembekis45@gmail.com
+          </a>
+          <a className="contact-link" href="https://github.com/tsembp" target="_blank" rel="noreferrer">
+            <FaGithub aria-hidden="true" /> GitHub
+          </a>
+          <a className="contact-link" href="https://www.linkedin.com/in/panagiotis-tsembekis/" target="_blank" rel="noreferrer">
+            <FaLinkedin aria-hidden="true" /> LinkedIn
+          </a>
+          <a className="btn btn-outline" href={assetUrl('assets/Panagiotis_Tsembekis_CV.pdf')} target="_blank" rel="noreferrer">
+            Download CV
+          </a>
+        </div>
       </div>
     </section>
   );

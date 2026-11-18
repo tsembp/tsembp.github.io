@@ -11,7 +11,6 @@
   #projects { padding-left: 2rem; padding-right: 2rem; }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { gap: 2.5rem; }
-  .contact-cards { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* =========================================
@@ -27,7 +26,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 2.5rem;
-    min-height: 100vh;
+    min-height: 85vh;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -52,9 +51,8 @@
 
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .contact-cards { grid-template-columns: 1fr; gap: 0.75rem; }
+  #contact .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
 
-  .contact-card { flex-direction: row; align-items: center; gap: 1rem; }
 
   footer { padding: 1.5rem 2rem; }
 }

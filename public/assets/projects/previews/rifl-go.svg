@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title description">
+  <title id="title">Exactly-once RPC sequence diagram</title>
+  <desc id="description">A client retries a request after a lost reply; the server replays the saved result without repeating the side effect</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#35dba6"/></marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e0716b"/></marker>
+  </defs>
+  <rect width="1200" height="680" fill="#101a24"/>
+  <rect x="1" y="1" width="1198" height="678" fill="none" stroke="#263847" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="85" y="112" fill="#8fa0af" font-size="18" letter-spacing="3">EXACTLY-ONCE RPC · GO</text>
+    <rect x="900" y="82" width="216" height="42" rx="21" fill="#123e36" stroke="#1a8169"/>
+    <circle cx="928" cy="103" r="7" fill="#31d8a4"/>
+    <text x="945" y="110" fill="#bdf5e1" font-size="16" font-weight="700">0 DUPLICATES</text>
+    <rect x="160" y="170" width="200" height="56" rx="8" fill="#16242e" stroke="#2f4658"/>
+    <text x="260" y="205" fill="#d5e0e8" font-size="22" text-anchor="middle" font-weight="700">Client</text>
+    <rect x="840" y="170" width="200" height="56" rx="8" fill="#16242e" stroke="#2f4658"/>
+    <text x="940" y="205" fill="#d5e0e8" font-size="22" text-anchor="middle" font-weight="700">Server</text>
+    <path d="M260 226V610M940 226V610" stroke="#2f4658" stroke-width="2" stroke-dasharray="6 8"/>
+    <path d="M260 290H930" stroke="#35dba6" stroke-width="4" marker-end="url(#a)"/>
+    <text x="600" y="278" fill="#a8b6c2" font-size="18" text-anchor="middle">Add(id=(c, 7), +1)</text>
+    <rect x="860" y="305" width="160" height="36" rx="6" fill="#256f5d"/>
+    <text x="940" y="329" fill="#d9fbee" font-size="15" text-anchor="middle">commit state + record</text>
+    <path d="M930 380H600" stroke="#e0716b" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#r)"/>
+    <text x="760" y="368" fill="#e0716b" font-size="18" text-anchor="middle">reply lost</text>
+    <path d="M590 366L560 396M560 366L590 396" stroke="#e0716b" stroke-width="5" stroke-linecap="round"/>
+    <path d="M260 450H930" stroke="#35dba6" stroke-width="4" marker-end="url(#a)"/>
+    <text x="600" y="438" fill="#a8b6c2" font-size="18" text-anchor="middle">retry Add(id=(c, 7), +1)</text>
+    <rect x="860" y="465" width="160" height="36" rx="6" fill="#1d3a4d"/>
+    <text x="940" y="489" fill="#cfe6f5" font-size="15" text-anchor="middle">duplicate · replay</text>
+    <path d="M930 540H270" stroke="#35dba6" stroke-width="4" marker-end="url(#a)"/>
+    <text x="600" y="528" fill="#a8b6c2" font-size="18" text-anchor="middle">original result</text>
+    <text x="600" y="600" fill="#8fa0af" font-size="16" text-anchor="middle" letter-spacing="1">COMPLETION RECORDS · ACK-BASED GC · bbolt</text>
+  </g>
+</svg>

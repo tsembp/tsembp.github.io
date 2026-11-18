@@ -15,26 +15,15 @@ interface TimelineItem {
 
 const workItems: TimelineItem[] = [
   {
-    logo: assetUrl('assets/company-icons/pozare-logo.png'),
-    alt: 'pozare',
-    company: 'pozare',
-    companyUrl: 'https://pozare.app',
-    date: 'Sep 2026 – Present',
-    role: 'Founding Engineer',
-    bullets: [
-      'Co-building the full-stack platform, from user-facing workflows to backend services.',
-    ],
-  },
-  {
     logo: assetUrl('assets/company-icons/talos_trading_logo.jpeg'),
-    alt: 'Talos Trading',
-    company: 'Talos Trading',
+    alt: 'Talos',
+    company: 'Talos',
     date: 'Jun 2026 – Sep 2026',
     role: 'Software Engineer Intern',
     bullets: [
-      'Designed and implemented a reusable Go-based Gateway Certification Framework to automate conformance testing of trading gateways.',
-      'Built 7 certifications based on known gateway failure scenarios, helping identify real issues and improve reliability.',
-      'Designed and documented a full API that supports on-demand test execution, run deduplication, prioritization, cancellation, and status tracking, making gateway testing significantly more efficient and accessible.',
+      'Built a reusable Go framework that automates trading gateway certification (connectivity, symbols, credentials, order execution); now runs across all 30+ gateways and is used by the team to build and debug them.',
+      'Implemented 7 failure-scenario certifications, including hard-to-reproduce ones such as rate limits; in testing on about 10 gateways it found issues in 3, including a critical unhandled max-open-orders rejection that was masked as a generic error.',
+      'Designed and documented an API for on-demand test execution with run deduplication, prioritization, cancellation, and status tracking.',
     ],
   },
   {
@@ -44,9 +33,9 @@ const workItems: TimelineItem[] = [
     date: 'Jul 2025 – Jan 2026',
     role: 'Junior Engineer Intern',
     bullets: [
-      'Improved production DDoS alerting reliability by migrating a Python service to a Kubernetes CronJob, generating context-rich alerts consumed by downstream Jira workflows and Teams notifications.',
-      'Built and maintained a FastAPI + MySQL service analyzing 10k+ Jira incidents to identify missing automation diagnostics, reducing sprint planning and prioritization time by 75%.',
-      'Designed self-service REST APIs for regex-based automation rule registration, replacing direct database edits and managing hundreds of rules, reducing manual operational effort by ~50%.',
+      'Migrated a production Python DDoS alerting service from a standalone while loop to a Kubernetes CronJob, and integrated context-rich alerts with Jira and Microsoft Teams.',
+      'Built a FastAPI/MySQL dashboard used by the 8–10-engineer team to register alert-triggered automations (log recovery, commands in k8s pods, Jira context gathering), replacing a manual Confluence, SSH and hand-edited SQL workflow.',
+      'Analyzed 10k+ Jira incidents to identify missing automation diagnostics, cutting sprint planning and prioritization time by 75%.',
     ],
   },
   {
@@ -54,41 +43,39 @@ const workItems: TimelineItem[] = [
     alt: 'CYENS CoE',
     company: 'CYENS Centre of Excellence',
     date: 'Jun 2025 – Jul 2025',
-    role: 'Software Engineering Intern',
+    role: 'Software Engineer Intern',
     bullets: [
-      'Built branching story flows for an AI storytelling platform, supporting manual input, AI regeneration, and LLM summarization with regex validation.',
-      'Refactored backend from monolithic Streamlit scripts to modular architecture, improving scalability and testability.',
-      'Upgraded story engine to use LangChain chains and custom prompts for better output control.',
-      'Supported deployment, testing, and debugging for research study readiness.',
+      'Built LangChain story-generation and summarization pipelines for an AI storytelling research platform, with branching story flows, AI regeneration and regex validation.',
+      'Refactored the backend from monolithic Streamlit scripts into a modular architecture, improving scalability and testability.',
     ],
   },
 ];
 
 const openSourceItems: TimelineItem[] = [
   {
-    logo: assetUrl('assets/company-icons/meta.webp'),
-    alt: 'Meta / pyrefly',
-    company: 'Meta (facebook/pyrefly)',
-    date: 'Jan 2026 – Present',
-    role: 'Open Source Contributor',
-    bullets: [
-      'Fixed incorrect SelfType attribute lookup in the pyrefly type checker for classes inheriting from Any by implementing spec-aligned fallback logic and adding regression tests (merged PR #2271).',
-    ],
-    actions: [
-      { label: 'view PR #2271', url: 'https://github.com/facebook/pyrefly/pull/2271' },
-    ],
-  },
-  {
     logo: assetUrl('assets/company-icons/pydantic.jpeg'),
     alt: 'Pydantic',
-    company: 'Pydantic',
-    date: 'Jan 2026 – Present',
+    company: 'Pydantic (29k+ GitHub stars)',
+    date: 'Jan 2026',
     role: 'Open Source Contributor',
     bullets: [
-      'Improved ImportString error handling in Pydantic to prevent masked dependency failures; added regression tests and ensured full CI pass (merged PR #12740).',
+      'Fixed ImportString error handling so underlying dependency failures surface instead of being masked; added regression tests and passed full CI (merged PR #12740).',
     ],
     actions: [
       { label: 'view PR #12740', url: 'https://github.com/pydantic/pydantic/pull/12740' },
+    ],
+  },
+  {
+    logo: assetUrl('assets/company-icons/meta.webp'),
+    alt: 'Meta / pyrefly',
+    company: 'Pyrefly (Meta\'s Python type checker, Rust)',
+    date: 'Jan 2026',
+    role: 'Open Source Contributor',
+    bullets: [
+      'Fixed SelfType attribute lookup for classes inheriting from Any by implementing spec-aligned fallback logic, with regression tests (merged PR #2271).',
+    ],
+    actions: [
+      { label: 'view PR #2271', url: 'https://github.com/facebook/pyrefly/pull/2271' },
     ],
   },
 ];
@@ -99,9 +86,10 @@ const educationItems: TimelineItem[] = [
     alt: 'University of Cyprus',
     company: 'University of Cyprus',
     date: 'Expected Jun 2027',
-    role: 'BSc Computer Science',
+    role: 'BSc Computer Science · GPA 8.08/10',
     bullets: [
-      'Strong academic foundation in Java and C programming, OOP Principles, Data Structures and algorithmic problem solving.',
+      'Coursework: Algorithms, Data Structures, Operating Systems, Datacenter Computing, Databases, Networking.',
+      'Bachelor\'s thesis (in progress): LLM routing across the edge continuum, a router that picks the (device, model) deployment per prompt, evaluated with quantized 0.8B/2B models on an NVIDIA Orin edge device.',
     ],
   },
   {
@@ -111,7 +99,7 @@ const educationItems: TimelineItem[] = [
     date: 'Jan 2026 – May 2026',
     role: 'Exchange Program (Erasmus+), Computer Science',
     bullets: [
-      'Currently enrolled in Security, Automated Planning, Software Quality, Testing & Maintenance, Embedded Systems and Project Management.',
+      'Studied Security, Automated Planning, Software Quality, Testing & Maintenance, Embedded Systems and Project Management.',
     ],
   },
   {
@@ -121,7 +109,7 @@ const educationItems: TimelineItem[] = [
     date: 'Mar 2025 – May 2025',
     role: 'Back-End Software Engineering Course',
     bullets: [
-      'Completed Wargaming\'s competitive Back-End SWE course — OS, Networking, Linux, SQL/ORMs, FastAPI, CI/CD, DevOps, Kubernetes.',
+      'Completed Wargaming\'s competitive Back-End SWE course: OS, Networking, Linux, SQL/ORMs, FastAPI, CI/CD, DevOps, Kubernetes.',
       'Built an HTTP server and a round-robin message broker using FastAPI, SQLAlchemy, and GitLab CI.',
     ],
     actions: [

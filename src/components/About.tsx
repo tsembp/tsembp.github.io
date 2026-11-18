@@ -13,6 +13,10 @@ import {
   FaLeaf,
   FaLink,
   FaLinux,
+  FaProjectDiagram,
+  FaRobot,
+  FaCheckCircle,
+  FaCodeBranch,
   FaPython,
   FaServer,
   FaSyncAlt
@@ -22,11 +26,11 @@ import { SiGo } from 'react-icons/si';
 const skillGroups = [
   {
     label: 'languages',
-    items: ['Go', 'Python', 'Java', 'SQL', 'C++'],
+    items: ['Go', 'Python', 'Java', 'SQL', 'TypeScript'],
   },
   {
     label: 'frameworks',
-    items: ['FastAPI', 'Spring Boot', 'SQLAlchemy', 'LangChain'],
+    items: ['FastAPI', 'Next.js', 'Spring Boot', 'SQLAlchemy', 'LangChain'],
   },
   {
     label: 'databases',
@@ -34,7 +38,15 @@ const skillGroups = [
   },
   {
     label: 'tools',
-    items: ['Linux', 'Git', 'Docker', 'Kubernetes', 'CI/CD Pipelines', 'Grafana', 'Jira'],
+    items: ['Linux', 'Git', 'Docker', 'Kubernetes', 'Grafana', 'Prometheus', 'Jira', 'CI/CD Pipelines'],
+  },
+  {
+    label: 'ai tooling',
+    items: ['Claude Code', 'Codex', 'LLM Pipelines'],
+  },
+  {
+    label: 'practices',
+    items: ['Distributed Systems', 'Code Review', 'Testing'],
   },
 ];
 
@@ -43,7 +55,8 @@ const skillIcons: Record<string, IconType> = {
   Go: SiGo,
   Java: FaJava,
   SQL: FaDatabase,
-  'C++': FaCode,
+  TypeScript: FaCode,
+  'Next.js': FaCode,
   FastAPI: FaBolt,
   'Spring Boot': FaLeaf,
   SQLAlchemy: FaLayerGroup,
@@ -56,15 +69,23 @@ const skillIcons: Record<string, IconType> = {
   Docker: FaDocker,
   Kubernetes: FaCube,
   Grafana: FaChartLine,
+  Prometheus: FaChartLine,
   Jira: FaJira,
   'CI/CD Pipelines': FaSyncAlt,
+  'Claude Code': FaRobot,
+  Codex: FaRobot,
+  'LLM Pipelines': FaLink,
+  'Distributed Systems': FaProjectDiagram,
+  'Code Review': FaCodeBranch,
+  Testing: FaCheckCircle,
 };
 
 const skillIconColors: Record<string, string> = {
   Python: '#3776AB',
   Java: '#E76F00',
   SQL: '#4DB6AC',
-  'C++': '#5C6BC0',
+  TypeScript: '#3178C6',
+  'Next.js': '#9aa7b2',
   FastAPI: '#009688',
   'Spring Boot': '#6DB33F',
   SQLAlchemy: '#D32F2F',
@@ -77,6 +98,7 @@ const skillIconColors: Record<string, string> = {
   Docker: '#2496ED',
   Kubernetes: '#326CE5',
   Grafana: '#F46800',
+  Prometheus: '#E6522C',
   Jira: '#2684FF',
 };
 
@@ -88,12 +110,11 @@ const About = () => {
 
       <div className="about-grid">
         <div className="about-bio">
-          <h3>// background</h3>
           <ul className="about-list">
-            <li>Final-year Computer Science student interested in building reliable software and exploring fintech and trading.</li>
-            <li>Building pozare, an app for capturing and sharing the moments that make events memorable.</li>
-            <li>Seeking graduate opportunities worldwide in software engineering, fintech, or trading.</li>
-            <li>Contributed to open-source projects including Pydantic and Meta&apos;s Pyrefly.</li>
+            <li>Final-year Computer Science student (GPA 8.08/10) focused on backend, distributed systems and reliable infrastructure software.</li>
+            <li>Co-founder of Stekki, a multi-tenant loyalty platform with Apple/Google Wallet passes, built in Go, PostgreSQL and Next.js.</li>
+            <li>Open to graduate and internship roles worldwide, especially in trading, fintech and payments infrastructure; EU citizen, open to relocation.</li>
+            <li>Merged contributions to Pydantic (29k+ stars) and Meta&apos;s Pyrefly type checker.</li>
             <li>
               Won 3rd place at the Bank of Cyprus Hackathon 6.0 with my team TestoBugs.
               {' '}

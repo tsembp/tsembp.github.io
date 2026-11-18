@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { assetUrl } from '../utils/asset'
 
-type ProjectId = 'studai' | 'wgDiscordBot' | 'jobApplicationTracker' | 'osrh' | 'quantLabs' | 'others';
+type ProjectId = 'stekki' | 'riflGo' | 'studai' | 'wgDiscordBot' | 'jobApplicationTracker' | 'osrh' | 'quantLabs' | 'others';
 
 interface ProjectData {
   title: string;
@@ -16,6 +16,35 @@ interface ProjectData {
 }
 
 const projectsData: Record<ProjectId, ProjectData> = {
+  stekki: {
+    title: 'Stekki',
+    date: 'Nov 2026 – Present',
+    description: 'A multi-tenant loyalty platform for Cypriot small businesses, built with Apple and Google Wallet passes. I am co-founder and engineer; a pilot is launching.',
+    gallery: [
+      assetUrl('assets/projects/gallery/stekki/1.png'),
+    ],
+    bullets: [
+      { label: 'Wallet passes', text: 'Built Apple Wallet pass issuance with live updates over APNs, plus location-aware pass relevance and notifications that respect consent, quiet-window and send-once rules.' },
+      { label: 'Plan entitlements', text: 'Defined plan entitlements as one JSON policy, code-generated into Go and TypeScript and enforced server-side.' },
+      { label: 'Admin console', text: 'Built the platform-admin console for onboarding businesses and managing plans.' },
+    ],
+    links: [{ label: 'getstekki.com', url: 'https://getstekki.com' }],
+    tags: ['Go', 'PostgreSQL', 'Next.js', 'TypeScript', 'APNs'],
+  },
+  riflGo: {
+    title: 'Exactly-Once RPC Layer (RIFL-Go)',
+    date: 'Oct - Nov 2026',
+    description: 'A RIFL-inspired exactly-once RPC layer over Go net/rpc, built for the Datacenter Computing course. Retries after lost replies never repeat side effects, even across server crashes.',
+    gallery: [],
+    bullets: [
+      { label: 'Durable completion records', text: 'Commits each mutation and its completion record atomically in bbolt, so a restarted server replays the original result instead of re-executing.' },
+      { label: 'Ack-based garbage collection', text: 'Clients piggyback their lowest unfinished sequence; per-client ordered buckets let the server reclaim records cheaply and reject stale requests.' },
+      { label: 'Fault-injection benchmarks', text: 'Ran on bare-metal CloudLab with over 20 SIGKILLs per configuration; a standby took over in 2.1–3.7 ms median with zero duplicate effects.' },
+      { label: 'Performance redesign', text: 'Redesigned the storage schema, cutting a 16% four-client slowdown to 2%.' },
+    ],
+    links: [{ label: 'github', url: 'https://github.com/tsembp/rifl-go' }],
+    tags: ['Go', 'bbolt', 'net/rpc', 'CloudLab', 'Distributed Systems'],
+  },
   studai: {
     title: '🧠 stud(ai)',
     date: 'May 2025',
@@ -125,6 +154,8 @@ const projectsData: Record<ProjectId, ProjectData> = {
 };
 
 const projectCards = [
+  { id: 'stekki' as ProjectId, image: assetUrl('assets/projects/previews/stekki.png'), title: 'Stekki', subtitle: 'Nov 2026 – Present' },
+  { id: 'riflGo' as ProjectId, image: assetUrl('assets/projects/previews/rifl-go.svg'), title: 'Exactly-Once RPC Layer (RIFL-Go)', subtitle: 'Oct - Nov 2026' },
   { id: 'quantLabs' as ProjectId, image: assetUrl('assets/projects/previews/quantlabs.svg'), title: 'Quant Labs', subtitle: 'In progress' },
   { id: 'osrh' as ProjectId, image: assetUrl('assets/projects/previews/osrh.png'), title: 'One-Stop Ride-Hail (OSRH)', subtitle: 'October - November 2025' },
   { id: 'studai' as ProjectId, image: assetUrl('assets/projects/previews/studai.png'), title: 'AI Study Mate — stud(ai)', subtitle: 'May 2025' },

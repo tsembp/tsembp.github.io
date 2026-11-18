@@ -9,15 +9,15 @@ const Profile = () => {
           Panagiotis<br />Tsembekis<span className="accent-dot">.</span>
         </h1>
         <ul className="hero-roles">
-          <li className="hero-role">Building @ pozare</li>
+          <li className="hero-role">Co-founder @ Stekki</li>
           <li className="hero-role">Previously @ Talos</li>
           <li className="hero-role">Final-Year CS Student @ UCY</li>
-          <li className="hero-role">Based in Nicosia, Cyprus</li>
+          <li className="hero-role">Open to SWE roles in trading, fintech &amp; payments</li>
         </ul>
         <div className="hero-actions">
           <button
             className="btn btn-primary"
-            onClick={() => window.open(assetUrl('assets/Panagiotis_Tsembekis_CV_2026.pdf'))}
+            onClick={() => window.open(assetUrl('assets/Panagiotis_Tsembekis_CV.pdf'))}
           >
             Download CV
           </button>
